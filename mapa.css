@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Hind);
 body
 {
 
@@ -42,20 +44,22 @@ padding: 0;
 
 	margin-top:-60px;
 	margin-left:100px;
+	font-family: 'Courgette';
 }
  #dno
  {
     background-color: #E0E0E0;
-    height: 7%;   
+    height: 7%; 
+    font-family: 'Hind';  
  }
  
 
- footer
+  footer
  {   
-     background-color: #FF9933;
+     background-color: #F8F8F8;
      height: 20%;
+     font-family: 'Hind';
  }
-
  #meni ul 
 {
         padding: 0;
@@ -72,6 +76,7 @@ padding: 0;
 
 	float: right;
 	margin: 1em;
+	font-family: 'Hind';
 
 }
 #meni a
@@ -80,21 +85,56 @@ padding: 0;
 	color: white;
 	text-decoration: none;
 	font-size: 20px;
+	font-family: 'Hind';
 }
 
 #kontaktdno
 {
-	
-
+	text-align: left;
+   font-size: 10pt;
+   font-family: 'Hind';
 }
 
 #podnozje
 {
 	text-align: center;
-	
+	font-family: 'Hind';
 
 }
 
+#mapaSlika
+{
+
+	background-image: url("mapa.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	
+       
+}
+
+#tabela
+{
+float:right;
+font-family: 'Hind';
+
+}
+
+table, th, td {
+   border: 1px solid black;
+   font-size: 18px;
+   text-align: center;
+   padding: 3px;
+   margin-right: 100px;
+   font-family: 'Hind';
+ 
+}
+
+table tr:first-child td {
+  color: #FFFFFF;
+  background-color: #FF6633;
+}
+table tr:nth-child(even) {background: #CCC}
+table tr:nth-child(odd) {background: #FFF}
 #face
 {
 	/*background-image:url("facebook.png");

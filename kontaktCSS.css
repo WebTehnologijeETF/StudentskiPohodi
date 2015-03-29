@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Hind);
+
 body
 {
 
@@ -6,11 +9,13 @@ body
 
 h1
 {
-
-	background-color: #FF9933;
+background-color: #FF9933;
 	height: 15%;
-	position: fixed;
+	margin: 0;
 	padding: 0;
+	text-indent: 10px;
+
+
 }
 
 #nebo
@@ -20,28 +25,46 @@ h1
 	   height: 75%;
     background-repeat: no-repeat;
     
+
    
  }
 
+#logo
+{
 
+	background-image: url("pokusajLoga4.png");
+height: 100%;
+	background-repeat: no-repeat;
+/*	position: relative;*/
+margin:0;
+padding: 0;
 
+}
+#tekst
+{
+
+	margin-top:-60px;
+	margin-left:100px;
+	font-family: 'Courgette';
+}
  #dno
  {
     background-color: #E0E0E0;
     height: 7%;   
  }
+ 
 
-
- footer
+  footer
  {   
-     background-color: #FF9933;
+     background-color: #F8F8F8;
      height: 20%;
+     font-family: 'Hind';
  }
-
  #meni ul 
 {
         padding: 0;
         margin: 0;
+        margin-top: -60px;
 }
 
 #meni li {
@@ -53,6 +76,7 @@ h1
 
 	float: right;
 	margin: 1em;
+	font-family: 'Hind';
 
 }
 #meni a
@@ -61,21 +85,81 @@ h1
 	color: white;
 	text-decoration: none;
 	font-size: 20px;
+	font-family: 'Hind';
 }
 
 #kontaktdno
 {
-	
-
+	text-align: left;
+   font-size: 10pt;
+   font-family: 'Hind';
 }
+
 
 #podnozje
 {
 	text-align: center;
-	
+	font-family: 'Hind';
 
 }
 
+#kont
+{
+  font-size: 20px;
+  margin-left: 150px;
+  font-family: 'Hind';
+
+}
+#zaBold
+{
+
+	font-weight: bold;
+	font-size: 30px;
+	font-family: 'Hind';
+}
+#slika
+{
+   background-image:url("lokacija.jpg");
+   background-position: right;
+   background-repeat: no-repeat;
+  
+   position: static;
+}
+#partneri
+{
+
+	margin-left:150px;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: 'Hind';
+}
+.moja_lista
+{
+   text-indent: 20px;
+   margin-left: 150px;
+   font-family: 'Hind';
+  
+
+}
+.moja_lista a
+{
+	font-size: 20px;
+	 font-family: 'Hind';
+    
+}
+
+ul
+{
+	list-style-image: url("images.jpg");
+ 	list-style-position: outside;
+}
+
+ul li
+{
+    line-height: 35px;
+     font-family: 'Hind';
+
+}
 #face
 {
 	/*background-image:url("facebook.png");

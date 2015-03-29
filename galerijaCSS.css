@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Hind);
+
 body
 {
 
@@ -42,6 +45,7 @@ padding: 0;
 
 	margin-top:-60px;
 	margin-left:100px;
+	font-family: 'Courgette';
 }
  #dno
  {
@@ -50,10 +54,11 @@ padding: 0;
  }
  
 
- footer
+  footer
  {   
-     background-color: #FF9933;
+     background-color: #F8F8F8;
      height: 20%;
+     font-family: 'Hind';
  }
 
  #meni ul 
@@ -72,6 +77,7 @@ padding: 0;
 
 	float: right;
 	margin: 1em;
+	font-family: 'Hind';
 
 }
 #meni a
@@ -80,21 +86,28 @@ padding: 0;
 	color: white;
 	text-decoration: none;
 	font-size: 20px;
+	font-family: 'Hind';
 }
 
 #kontaktdno
 {
-	
-
+	text-align: left;
+   font-size: 10pt;
+   font-family: 'Hind';
 }
+
 
 #podnozje
 {
 	text-align: center;
-	
+     font-family: 'Hind';	
 
 }
-
+#Izrada
+{
+	font-size: 30px;
+	font-family: 'Hind';
+}
 #face
 {
 	/*background-image:url("facebook.png");

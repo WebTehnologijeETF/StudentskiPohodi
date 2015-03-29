@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Hind);
 body
 {
 
@@ -42,18 +44,21 @@ padding: 0;
 
 	margin-top:-60px;
 	margin-left:100px;
+	font-family: 'Courgette';
 }
  #dno
  {
     background-color: #E0E0E0;
     height: 7%;   
+    font-family: 'Hind';
  }
  
 
  footer
  {   
-     background-color: #FF9933;
+     background-color: #F8F8F8;
      height: 20%;
+     font-family: 'Hind';
  }
 
  #meni ul 
@@ -72,6 +77,7 @@ padding: 0;
 
 	float: right;
 	margin: 1em;
+	font-family: 'Hind';
 
 }
 #meni a
@@ -80,20 +86,59 @@ padding: 0;
 	color: white;
 	text-decoration: none;
 	font-size: 20px;
+	font-family: 'Hind';
 }
 
 #kontaktdno
 {
-	
-
+	text-align: left;
+   font-size: 10pt;
+   font-family: 'Hind';
 }
 
 #podnozje
 {
 	text-align: center;
+	font-family: 'Hind';
 	
 
 }
+#oNama,#oNama2
+{
+    width: 50%;
+	text-align: justify;
+margin-left: 25%;
+font-family: 'Hind';
+	}
+
+#prica1
+{
+
+	background-image: url("prica1_1.jpg");
+	background-repeat: no-repeat;
+	
+
+}
+#desnaSLika
+{
+	background-image: url("nar_stiker.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+#prica2
+{
+
+	background-image: url("prica1_2.jpg");
+	background-repeat: no-repeat;
+	background-position: right;
+}
+#lijevaSLika
+{
+	background-image: url("nar_stiker2.jpg");
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
 
 #face
 {

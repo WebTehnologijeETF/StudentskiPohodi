@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Hind);
+
 body
 {
 
@@ -11,6 +14,7 @@ background-color: #FF9933;
 	margin: 0;
 	padding: 0;
 	text-indent: 10px;
+	position: static;
 
 
 }
@@ -42,6 +46,7 @@ padding: 0;
 
 	margin-top:-60px;
 	margin-left:100px;
+	font-family: 'Courgette';
 }
  #dno
  {
@@ -52,27 +57,32 @@ padding: 0;
 
  footer
  {   
-     background-color: #FF9933;
+     background-color: #F8F8F8;
      height: 20%;
+     font-family: 'Hind';
  }
 
  #meni ul 
-{
+{     
         padding: 0;
         margin: 0;
         margin-top: -60px;
+        
 }
 
 #meni li {
+	
         display: inline;
         padding-left: 11px;
+
 }
 #meni
 {
-
+    
 	float: right;
 	margin: 1em;
-
+clear: both;
+ font-family: 'Hind';
 }
 #meni a
 {
@@ -80,12 +90,14 @@ padding: 0;
 	color: white;
 	text-decoration: none;
 	font-size: 20px;
+	
 }
 
 #kontaktdno
 {
-	
-
+	text-align: left;
+   font-size: 10pt;
+    font-family: 'Hind';
 }
 
 #podnozje
@@ -93,20 +105,68 @@ padding: 0;
 	text-align: center;
 }
 
+#vijesti
+{
+background-image: url("Prag.jpg");
+	background-repeat:no-repeat;
+	 font-family: 'Hind';
+	
 
+
+}
 #nas1
 {
 
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 30px;
+	margin-left:620px;
+	background-color: orange;
+	width: 25%;
+	 font-family: 'Hind';
 }
-
+ 
 #aut1
- {
-   color: grey;
-   font-size: 12px;
+ { margin-top: -20px;
+   color: #989898;
+   font-size: 15px;
+   margin-left:620px;
+    font-family: 'Hind';
 
  }
+
+#vijest1
+{
+    width:25%;
+	text-align: justify;
+	 font-family: 'Hind';
+	margin-left:620px;
+}
+
+
+#det1 a
+{ 
+	color: orange;
+	font-weight: bold;
+margin-left: 620px;
+ font-family: 'Hind';
+}
+
+
+#vijesti2
+{
+	background-image: url("Istanbul.jpg");
+	background-repeat: no-repeat;
+    font-family: 'Hind';
+}
+
+
+#vijesti3
+{
+	background-image: url("Pariz.jpg");
+	background-repeat: no-repeat;
+	 font-family: 'Hind';
+  
+}
 
 #face
 {
