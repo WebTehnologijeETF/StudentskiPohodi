@@ -1,0 +1,153 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Hind);
+body
+{
+
+	background-color: #FFFFFF;
+}
+
+h1
+{
+background-color: #FF9933;
+	height: 15%;
+	margin: 0;
+	padding: 0;
+	text-indent: 10px;
+
+
+}
+
+#nebo
+{
+
+	background-image: url("pok.jpg");
+	   height: 75%;
+    background-repeat: no-repeat;
+    
+
+   
+ }
+
+#logo
+{
+
+	background-image: url("pokusajLoga4.png");
+height: 100%;
+	background-repeat: no-repeat;
+/*	position: relative;*/
+margin:0;
+padding: 0;
+
+}
+#tekst
+{
+
+	margin-top:-60px;
+	margin-left:100px;
+	font-family: 'Courgette';
+}
+ #dno
+ {
+    background-color: #E0E0E0;
+    height: 7%; 
+    font-family: 'Hind';  
+ }
+ 
+
+  footer
+ {   
+     background-color: #F8F8F8;
+     height: 20%;
+     font-family: 'Hind';
+ }
+ #meni ul 
+{
+        padding: 0;
+        margin: 0;
+        margin-top: -60px;
+}
+
+#meni li {
+        display: inline;
+        padding-left: 11px;
+}
+#meni
+{
+
+	float: right;
+	margin: 1em;
+	font-family: 'Hind';
+
+}
+#meni a
+{
+
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Hind';
+}
+
+#kontaktdno
+{
+	text-align: left;
+   font-size: 10pt;
+   font-family: 'Hind';
+}
+
+#podnozje
+{
+	text-align: center;
+	font-family: 'Hind';
+
+}
+
+#mapaSlika
+{
+
+	background-image: url("mapa.jpg");
+	background-repeat: no-repeat;
+	height: 100%;
+	
+       
+}
+
+#tabela
+{
+float:right;
+font-family: 'Hind';
+
+}
+
+table, th, td {
+   border: 1px solid black;
+   font-size: 18px;
+   text-align: center;
+   padding: 3px;
+   margin-right: 100px;
+   font-family: 'Hind';
+ 
+}
+
+table tr:first-child td {
+  color: #FFFFFF;
+  background-color: #FF6633;
+}
+table tr:nth-child(even) {background: #CCC}
+table tr:nth-child(odd) {background: #FFF}
+#face
+{
+	/*background-image:url("facebook.png");
+	background-repeat: no-repeat;
+    height: 100%;
+    padding: 0;
+    margin-top: -50px;
+ margin-left:900px;  */
+}
+#twitter
+{
+	/*background-image: url("twitter.jpg");
+	height: auto;
+	background-repeat: no-repeat;
+
+*/}

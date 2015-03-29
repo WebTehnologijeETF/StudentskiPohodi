@@ -1,0 +1,206 @@
+@import url(http://fonts.googleapis.com/css?family=Courgette);
+@import url(http://fonts.googleapis.com/css?family=Hind);
+body
+{
+
+	background-color: #FFFFFF;
+}
+
+h1
+{
+background-color: #FF9933;
+	height: 15%;
+	margin: 0;
+	padding: 0;
+	text-indent: 10px;
+
+
+}
+
+#nebo
+{
+
+	background-image: url("pok.jpg");
+	   height: 75%;
+    background-repeat: no-repeat;
+    
+
+   
+ }
+
+#logo
+{
+
+	background-image: url("pokusajLoga4.png");
+height: 100%;
+	background-repeat: no-repeat;
+/*	position: relative;*/
+margin:0;
+padding: 0;
+clear: both;
+
+}
+#tekst
+{
+
+	margin-top:-60px;
+	margin-left:100px;
+	font-family: 'Courgette';
+}
+ #dno
+ {
+    background-color: #E0E0E0;
+    height: 7%;   
+ }
+ 
+
+ footer
+ {   
+     background-color: #F8F8F8;
+     height: 20%;
+     font-family: 'Hind';
+ }
+
+ #meni ul 
+{
+        padding: 0;
+        margin: 0;
+        margin-top: -60px;
+}
+
+#meni li {
+        display: inline;
+        padding-left: 11px;
+}
+#meni
+{
+
+	float: right;
+	margin: 1em;
+	font-family: 'Hind';
+
+}
+#meni a
+{
+
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Hind';
+}
+
+#kontaktdno
+{
+	text-align: left;
+   font-size: 10pt;
+   font-family: 'Hind';
+}
+
+
+
+#prijaviSe
+{
+	
+	font-size: 18pt;
+	font-weight: bold;
+	color:#FF9900;
+	font-family: 'Hind';
+}
+
+#noviClan
+{
+	
+	font-size: 18pt;
+	font-weight: bold;
+	color:#FF6600;
+	font-family: 'Hind';
+	
+}
+
+#remember
+{
+	text-align: center;
+	font-family: 'Hind';
+
+}
+.signIN
+{   
+	font-size: 17px;
+     
+	font-family: 'Hind';
+	margin-top: 10px;
+}
+
+.submit
+{   font-size: 17px;
+   margin-left: 50px;
+   font-family: 'Hind';
+   margin-top: -10px;
+}
+#mail
+{
+    height:25px;
+    font-size:10pt;
+font-family: 'Hind';
+}
+#password
+{
+
+	height: 25px;
+	font-size: 10pt;
+font-family: 'Hind';
+
+}
+#ime,#prezime,#mail1,#pass1
+{   
+
+	display: inline-block;
+padding: 2px 1px; line-height: 15px;
+font-family: 'Hind';
+
+
+}
+#Ime
+{
+    text-indent: 14px;
+    font-family: 'Hind';
+}
+#pass1
+{
+	
+    font-family: 'Hind';
+}
+#pass
+{
+	text-indent: 25px;
+font-family: 'Hind';
+}
+
+
+
+#forma2
+{
+	float: right;
+	margin-top: -230px;
+font-family: 'Hind';
+}
+.formaPrijava
+{
+	font-family: 'Hind';
+}
+#face
+{
+	/*background-image:url("facebook.png");
+	background-repeat: no-repeat;
+    height: 100%;
+    padding: 0;
+    margin-top: -50px;
+ margin-left:900px;  */
+}
+#twitter
+{
+	/*background-image: url("twitter.jpg");
+	height: auto;
+	background-repeat: no-repeat;
+
+*/}
