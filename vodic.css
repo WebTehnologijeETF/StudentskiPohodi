@@ -1,0 +1,113 @@
+body
+{
+
+	background-color: #FFFFFF;
+}
+
+h1
+{
+background-color: #FF9933;
+	height: 15%;
+	margin: 0;
+	padding: 0;
+	text-indent: 10px;
+
+
+}
+
+#nebo
+{
+
+	background-image: url("pok.jpg");
+	   height: 75%;
+    background-repeat: no-repeat;
+    
+
+   
+ }
+
+#logo
+{
+
+	background-image: url("pokusajLoga4.png");
+height: 100%;
+	background-repeat: no-repeat;
+/*	position: relative;*/
+margin:0;
+padding: 0;
+
+}
+#tekst
+{
+
+	margin-top:-60px;
+	margin-left:100px;
+}
+ #dno
+ {
+    background-color: #E0E0E0;
+    height: 7%;   
+ }
+ 
+
+ footer
+ {   
+     background-color: #FF9933;
+     height: 20%;
+ }
+
+ #meni ul 
+{
+        padding: 0;
+        margin: 0;
+        margin-top: -60px;
+}
+
+#meni li {
+        display: inline;
+        padding-left: 11px;
+}
+#meni
+{
+
+	float: right;
+	margin: 1em;
+
+}
+#meni a
+{
+
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+#kontaktdno
+{
+	
+
+}
+
+#podnozje
+{
+	text-align: center;
+	
+
+}
+
+#face
+{
+	/*background-image:url("facebook.png");
+	background-repeat: no-repeat;
+    height: 100%;
+    padding: 0;
+    margin-top: -50px;
+ margin-left:900px;  */
+}
+#twitter
+{
+	/*background-image: url("twitter.jpg");
+	height: auto;
+	background-repeat: no-repeat;
+
+*/}
