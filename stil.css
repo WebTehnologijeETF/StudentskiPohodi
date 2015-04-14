@@ -271,6 +271,13 @@ font-family: 'Hind';
 	font-size: 30px;
 	font-family: 'Hind';
 }
+#stablo
+{
+
+	float: right;
+	margin-top: -380px;
+}
+/*
 #slika
 {
    background-image:url("lokacija.jpg");
@@ -278,7 +285,7 @@ font-family: 'Hind';
    background-repeat: no-repeat;
   
    position: static;
-}
+}*/
 #partneri
 {
 
@@ -302,22 +309,31 @@ font-family: 'Hind';
     
 }
 
-ul
+ul 
 {
 	list-style-image: url("images.jpg");
  	list-style-position: outside;
 }
 
-ul li
+ul li 
 {
     line-height: 35px;
      font-family: 'Hind';
 
 }
 
+ #lista1 ul
+{ display: none;
+	
+}
 
+#lista1 li
+{
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 50px;
 
-
+}
 #prijaviSe
 {
 	
@@ -374,25 +390,25 @@ font-family: 'Hind';
 #ime,#prezime,#mail1,#pass1
 {   
 
-	display: inline-block;
-padding: 2px 1px; line-height: 15px;
+display: inline-block;
+padding: 0px 0px; line-height: 1px;
 font-family: 'Hind';
 
 
 }
 #Ime
 {
-    text-indent: 14px;
+    text-indent: 10px;
     font-family: 'Hind';
 }
 #pass1
 {
-	
+	text-indent: 10px;
     font-family: 'Hind';
 }
 #pass
 {
-	text-indent: 25px;
+	text-indent: 10px;
 font-family: 'Hind';
 }
 

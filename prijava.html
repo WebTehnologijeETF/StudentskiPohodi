@@ -32,9 +32,9 @@
 
   <div id="forma1">
   	
-   <form class="formaPrijava">
+   <form class="formaPrijava" method="POST" action="form-handler" onsubmit="return checkForm(this);">
   		<p id="prijaviSe">Prijavi se</p>
-		<input id="mail" type="email" placeholder="Email@hotmail.com">
+		<input id="mail" type="email"  placeholder="Email@hotmail.com">
         <input id="password"type="password" placeholder="Password">
         <br>
         <br>
@@ -43,9 +43,10 @@
 		<button type="submit" class="signIn">Prijava</button>
       
 </div>
-        <div id="forma2">
+</form>
+    <div id="forma2">
     <p id="noviClan">Učlani se</p>
-    <form class="forma_novi_clan">
+    <form class="forma_novi_clan" method="POST" action="form-handler" onsubmit="return checkForm2(this);">
 	
         <label id="Ime">Ime</label>
 		<input id="ime" type="textbox">
@@ -54,22 +55,14 @@
         <br> 
         <br>
        	<label id="email">E-mail</label>
-		<input id="mail1" type="mail">
+		<input id="mail1" type="mail" >
 		<label id="pass">Šifra</label>
        	<input id="pass1"type="textbox">
        	<br>
        	<br>
-       
-
-        <button type="submit" class="submit">Spremi</button>
-
-        </form>
-
+       <button type="submit" class="submit">Spremi</button>
+  </form>
 </div>
-
-
-
-
 	<footer>
   <p id="kontaktdno">  Kontakt<br>
     ------------------------<br>
@@ -78,7 +71,7 @@
         Trg oslobođenja - Alija Izetbegović 1,
 71000 Sarajevo,
 Bosna i Hercegovina
-  
-
-</footer>
+  </footer>
+  <script src="skriptaValidacija.js"></script>
+  <script src="skriptaValidacija1.js"></script>
 	</BODY></HTML>
