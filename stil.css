@@ -190,7 +190,7 @@ font-family: 'Hind';
 
 }
 
-table, th, td {
+table, th, td #MapaTabela{
    border: 1px solid black;
    font-size: 18px;
    text-align: center;
@@ -200,15 +200,24 @@ table, th, td {
  
 }
 
-table tr:first-child td {
+table tr:first-child td #MapaTabela{
   color: #FFFFFF;
   background-color: #FF6633;
 }
-table tr:nth-child(even) {background: #CCC}
-table tr:nth-child(odd) {background: #FFF}
+table tr:nth-child(even) #MapaTabela {background: #CCC}
+table tr:nth-child(odd) #MapaTabela {background: #FFF}
 
 
+table, th, td #TabelaPrijaviSe{
+   border:none;
+   font-family: 'Hind';
+}
 
+
+table, td,tr #tabelaNoviClan{
+   border:none;
+   font-family: 'Hind';
+}
 
 #Izrada
 {
@@ -322,15 +331,12 @@ ul li
 
 }
 
- #lista1 ul
-{ display: none;
-	
-}
+
 
 #lista1 li
 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   margin-left: 50px;
 
 }
@@ -358,47 +364,51 @@ ul li
 	text-align: center;
 	font-family: 'Hind';
 
+
 }
 .signIN
 {   
-	font-size: 17px;
+	font-size: 15px;
      
 	font-family: 'Hind';
 	margin-top: 10px;
 }
 
 .submit
-{   font-size: 17px;
+{   font-size: 15px;
    margin-left: 50px;
    font-family: 'Hind';
-   margin-top: -10px;
+   margin-top: 0px;
+   float: right;
+   margin-right: 100px;
 }
 #mail
 {
-    height:25px;
+    height:35px;
     font-size:10pt;
 font-family: 'Hind';
+width: 200px;
 }
 #password
 {
 
-	height: 25px;
+	height: 35px;
 	font-size: 10pt;
 font-family: 'Hind';
-
+width: 200px;
 }
-#ime,#prezime,#mail1,#pass1
+#ime,#prezime,#mail1,#pass1,#potvrdiSifru
 {   
 
 display: inline-block;
-padding: 0px 0px; line-height: 1px;
+ line-height: 20px;
 font-family: 'Hind';
 
 
 }
 #Ime
 {
-    text-indent: 10px;
+    text-indent: 20px;
     font-family: 'Hind';
 }
 #pass1
@@ -412,15 +422,28 @@ font-family: 'Hind';
 font-family: 'Hind';
 }
 
+#potSifru1,#mail1,#pass1,#ime,#prezime
+{
 
+	height: 25px;
+	font-size: 10pt;
+font-family: 'Hind';
+
+}
 
 #forma2
 {
 	float: right;
-	margin-top: -230px;
+	margin-top: -280px;
 font-family: 'Hind';
 }
 .formaPrijava
-{
+{    
 	font-family: 'Hind';
+}
+
+#komentarMail,#komentarSifra,#komentarIme,#komentarPrezime,#komentarMail1,#komentarMail1,#komentarpass1,#komentarPotvrdiSifru
+{   font-size: 8pt;
+   font-family: 'Hind';
+
 }
