@@ -32,37 +32,62 @@
 
   <div id="forma1">
   	
-   <form class="formaPrijava" method="POST" action="form-handler" onsubmit="return checkForm(this);">
+   <form class="formaPrijava" method="POST"  onsubmit="return checkForm(this);">
   		<p id="prijaviSe">Prijavi se</p>
-		<input id="mail" type="email"  placeholder="Email@hotmail.com">
-        <input id="password"type="password" placeholder="Password">
-        <br>
-        <br>
-        <input id="remember" type="checkbox"> Remember me
-       	<br>
+     <table id="tabelaPrijaviSe">
+      <tr>
+		   <td><input id="mail" type="email"  placeholder="Email@hotmail.com"></td>
+       <td id ="greskaMail"></td>
+       <td id="komentarMail"> </td>
+     </tr>
+     <tr>
+      <td><input id="password"type="password" placeholder="Password"> </td>
+      <td id ="greskaSifra"></td>
+      <td id="komentarSifra"></td>
+    </tr>
+    <tr>
+      <td> <input id="remember" type="checkbox"> Remember me</td>
+    </tr>
+</table>
 		<button type="submit" class="signIn">Prijava</button>
-      
+       
 </div>
 </form>
-    <div id="forma2">
-    <p id="noviClan">Učlani se</p>
-    <form class="forma_novi_clan" method="POST" action="form-handler" onsubmit="return checkForm2(this);">
-	
-        <label id="Ime">Ime</label>
-		<input id="ime" type="textbox">
-		<label id="Prezime">Prezime</label>
-       	<input id="prezime"type="textbox">
-        <br> 
-        <br>
-       	<label id="email">E-mail</label>
-		<input id="mail1" type="mail" >
-		<label id="pass">Šifra</label>
-       	<input id="pass1"type="textbox">
-       	<br>
-       	<br>
-       <button type="submit" class="submit">Spremi</button>
-  </form>
+<div id="forma2">
+ <p id="noviClan">Učlani se</p>
+  <form class="forma_novi_clan" method="POST"  onsubmit="return checkForm2(this);">
+	 <table id="tabelaNoviClan">
+     <tr>
+       <td> <label id="Ime1">Ime</label></td>
+       <td> <input id="ime" type="textbox"></td>
+       <td id="greskaIme"></td>
+       <td id="komentarIme"> </td>
+    <tr>
+      <td><label id="Prezime1">Prezime</label></td>
+      <td><input id="prezime"type="textbox"></td>
+       <td id="greskaPrezime"></td>
+       <td id="komentarPrezime"> </td>
+    <tr>
+      <td><label id="email">E-mail</label></td>
+		  <td><input id="mail1" type="mail" placeholder="Email@hotmail.com"></td>
+       <td id="greskaMail1"></td>
+       <td id="komentarMail1"> </td>
+		<tr>
+       <td><label id="pass">Šifra</label></td>
+       <td>	<input id="pass1"type="password"></td>
+        <td id="greskapass1"></td>
+        <td id="komentarpass1"> </td>
+     <tr>
+       <td><label id="potvrdiSifru">Potvrdi šifru</label></td>
+       <td> <input id="potSifru1"type="password"></td>
+        <td id="greskaPotvrdiSifru"></td>
+        <td id="komentarPotvrdiSifru"> </td>
+    </tr>
+  </table>
+ <button type="submit" class="submit">Spremi</button>
+</form>
 </div>
+
 	<footer>
   <p id="kontaktdno">  Kontakt<br>
     ------------------------<br>
@@ -73,5 +98,5 @@
 Bosna i Hercegovina
   </footer>
   <script src="skriptaValidacija.js"></script>
-  <script src="skriptaValidacija1.js"></script>
+  <script src="skriptaValidacijaa.js"></script>
 	</BODY></HTML>
