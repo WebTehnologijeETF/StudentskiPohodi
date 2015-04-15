@@ -8,7 +8,7 @@ if(form.ime.value == "" || form.ime.value.length<3 || form.ime.value.length>100 
         
       form.ime.focus();
       var k = document.getElementById('komentarIme');
-      k.innerHTML="Mora biti duze od 3 kraktera te se sastojati od slova abecede.";
+      k.innerHTML="Ne duze od 3 kraktera i samo slova abecede.";
       return false;
     }
     else if(form.ime.value!="" || form.ime.value.length<3 || form.ime.value.length>200 ||(re.test(form.ime.value))   )
@@ -25,7 +25,7 @@ if(form.prezime.value == ""|| form.prezime.value.length<3 || form.prezime.value.
       x.innerHTML="<img src='greska.png'>";
       form.prezime.focus();
       var k = document.getElementById('komentarPrezime');
-      k.innerHTML="Mora biti duza od 3 kraktera te se sastojati od slova abecede.";
+      k.innerHTML="Ne duze od 3 kraktera i samo slova abecede.";
       return false;
     }
     else if(form.prezime.value!="" || form.prezime.value.length<3 || form.prezime.value.length>200 ||(re.test(form.prezime.value)) )
