@@ -171,7 +171,7 @@ margin-left: 620px;
 
 
 
-
+/*
 
 #mapaSlika
 {
@@ -181,7 +181,7 @@ margin-left: 620px;
 	height: 100%;
 	
        
-}
+}*/
 
 #tabela
 {
@@ -189,7 +189,7 @@ float:right;
 font-family: 'Hind';
 
 }
-
+/*
 table, th, td #MapaTabela{
    border: 1px solid black;
    font-size: 18px;
@@ -207,7 +207,7 @@ table tr:first-child td #MapaTabela{
 table tr:nth-child(even) #MapaTabela {background: #CCC}
 table tr:nth-child(odd) #MapaTabela {background: #FFF}
 
-
+*/
 table, th, td #TabelaPrijaviSe{
    border:none;
    font-family: 'Hind';
@@ -349,7 +349,7 @@ ul li
 	font-family: 'Hind';
 }
 
-#noviClan
+#noviClan,#prijaviPohod
 {
 	
 	font-size: 18pt;
@@ -397,7 +397,7 @@ width: 200px;
 font-family: 'Hind';
 width: 200px;
 }
-#ime,#prezime,#mail1,#pass1,#potvrdiSifru
+#ime,#prezime,#mail1,#pass1,#potvrdiSifru,#naziv,#cijena
 {   
 
 display: inline-block;
@@ -422,7 +422,7 @@ font-family: 'Hind';
 font-family: 'Hind';
 }
 
-#potSifru1,#mail1,#pass1,#ime,#prezime
+#potSifru1,#mail1,#pass1,#ime,#prezime,#opcina,#mjesto
 {
 
 	height: 25px;
@@ -445,5 +445,25 @@ font-family: 'Hind';
 #komentarMail,#komentarSifra,#komentarIme,#komentarPrezime,#komentarMail1,#komentarMail1,#komentarpass1,#komentarPotvrdiSifru
 {   font-size: 8pt;
    font-family: 'Hind';
+
+}
+
+
+#MapaPrijava
+{
+
+
+}
+#nazivLabel,#opisLabel,#cijenaLabel
+{
+	font-family: 'Hind';
+	font-size: 12pt;
+text-align: right;
+}
+#opis
+{
+	display: inline-block;
+ 
+font-family: 'Hind';
 
 }

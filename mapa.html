@@ -1,41 +1,49 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML>
-<HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=utf-8">
-<TITLE>Studentski pohodi</TITLE>
 <link rel="stylesheet" type="text/css" href="stil.css">
-</HEAD>
 <BODY>
 	
-	<h1>
-     <div id="logo"></div>
-     <div id="tekst">Studentski pohodi</div>
-	</h1>
 
+  <div id="formaMapa">
+    <p id="prijaviPohod">Prijavi Pohod</p>
+   <form id="formaPohodi" method="POST"  onsubmit="return dodajProizvod(this)">
+     <table id="tabelaPohod">
+      <tr>
+      <td> <label id="nazivLabel">Naziv-Mjesto</label></td>
+       <td><input id="naziv" type="textbox" ></td>
+       <td id ="greskaNaziv"></td>
+       <td id="komentarNaziv"> </td>
+     </tr>
+     <tr>
+      <td> <label id="opisLabel">Opis</label></td>
+      <td><input id="opis" type="textarea" > </td>
+      <td id ="greskaOpis"></td>
+      <td id="komentarOpis"></td>
+    </tr>
+
+<tr>
+      <td> <label id="cijenaLabel">Cijena</label></td>
+      <td><input id="cijena" type="textbox" > </td>
+      <td id ="greskaCijena"></td>
+      <td id="komentarCijena"></td>
+    </tr>    
+    <tr></tr>
+</table>
+    
+<button type="submit" class="MapaPrijava">Prijavi</button>
+
+
+    
+       
 	
-	<div id="meni">
-	<ul>
-		<li><a href="index.html">Početna</a></li>
-		<li><a href="Vodic.html">Vodič za pohodaše</a></li>
-		<li><a href="mapa.html">Mapa</a></li>
-		<li><a href="galerija.html">Galerija</a></li>
-		<li><a href="kontakt.html">Kontakt</a></li>
-		<li><a href="prijava.html">Prijava</a></li>
-
-		</ul></div>
-    <div id ="nebo"></div>
-	<div id="twitter"></div>
-	<div id="dno"></div>
-	<div id="face"></div>
-
-   <div id="mapaSlika"> 
+   <!--div id="mapaSlika"> 
 
  <div id="tabela">
    	<br> <br>
 
    
 	
-<table>
+<table id="MapaTabela">
   <tr>
     <td>Grad</td>
     <td>Broj pohodaša</td> 
@@ -102,19 +110,10 @@
 
 
  </div>
-</div>
+</div-->
 
 
 
-	<footer>
-  <p id="kontaktdno">  Kontakt<br>
-    ------------------------<br>
-        033 275 987<br>
-        studentski.pohodi@live.com<br>
-        Trg oslobođenja - Alija Izetbegović 1,
-71000 Sarajevo,
-Bosna i Hercegovina
-  
 
-</footer>
-	</BODY></HTML>
+	</BODY>
+</HTML>

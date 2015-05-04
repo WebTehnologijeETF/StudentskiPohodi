@@ -1,8 +1,16 @@
+
 function checkForm2(form)
-  { var re = /^[a-zA-Z]+$/;
-    // validation fails if the input is blank
-  
+  {
+
+
+// regularni izraz    
+var re = /^[a-zA-Z]+$/;
+
+
+try
+{
 if(form.ime.value == "" || form.ime.value.length<3 || form.ime.value.length>100 ||(!re.test(form.ime.value)) ) {
+       
         var x =document.getElementById('greskaIme');
       x.innerHTML="<img src='greska.png'>";
         
@@ -19,8 +27,13 @@ if(form.ime.value == "" || form.ime.value.length<3 || form.ime.value.length>100 
       var k = document.getElementById('komentarIme');
       k.innerHTML="";
     }
-
+}
+catch(err)
+{
+  alert("greska pri provjeri imena");
+}
 if(form.prezime.value == ""|| form.prezime.value.length<3 || form.prezime.value.length>100 ||(!re.test(form.prezime.value))) {
+        
         var x =document.getElementById('greskaPrezime');
       x.innerHTML="<img src='greska.png'>";
       form.prezime.focus();
@@ -38,6 +51,7 @@ if(form.prezime.value == ""|| form.prezime.value.length<3 || form.prezime.value.
     }
 
 if(form.mail1.value == ""|| form.mail1.value.length<3 || form.mail1.value.length>100) {
+
         var x =document.getElementById('greskaMail1');
       x.innerHTML="<img src='greska.png'>";
       form.mail1.focus();
@@ -56,6 +70,7 @@ if(form.mail1.value == ""|| form.mail1.value.length<3 || form.mail1.value.length
     
     
 if(form.pass1.value == ""|| form.pass1.value.length<3 || form.pass1.value.length>100) {
+     
         var x =document.getElementById('greskapass1');
       x.innerHTML="<img src='greska.png'>";
       form.pass1.focus();
@@ -88,30 +103,118 @@ if(form.potSifru1.value != form.pass1.value) {
       k.innerHTML="";
     }
 
-    // regular expression to match only alphanumeric characters and spaces
-    
-
-    // validation fails if the input doesn't match our regular expression
-   /* if(!re.test(form.ime.value)
-    {  
-      var y =document.getElementById('greskaIme');
-      y.innerHTML="<img src='greska.png'>";
-      form.ime.focus();
+if(form.mjesto.value == "") {
+        var x =document.getElementById('greskaMjesto');
+      x.innerHTML="<img src='greska.png'>";
+      form.mjesto.focus();
+      var k = document.getElementById('komentarMjesto');
+      k.innerHTML="Unos je prazan.";
       return false;
+
     }
-    else  if(re.test(form.ime.value)
+
+    else if(form.mjesto.value != "")
     {
 
-       var y =document.getElementById('greskaIme');
-      y.innerHTML="<img src='correct.jpg'>";
+       var x =document.getElementById('greskaMjesto');
+      
+       var k = document.getElementById('komentarMjesto');
+      k.innerHTML="";
     }
+   if(form.opcina.value == "") {
 
- if(!re.test(form.prezime.value)) {
-      alert("Grešla:U unosu prezime nedozvoljeni karakteri!");
-      form.prezime.focus();
+        var x =document.getElementById('greskaOpcina');
+      x.innerHTML="<img src='greska.png'>";
+      form.opcina.focus();
+      var k = document.getElementById('komentarOpcina');
+      k.innerHTML="Unos je prazan.";
+      
       return false;
     }
-    // validation was successful*/
-  alert("Uspjesna prijava");  
-  return true;
+    else if(form.opcina.value != "")
+    {
+
+       var x =document.getElementById('greskaOpcina');
+     
+       var k = document.getElementById('komentarOpcina');
+      k.innerHTML="";
+    }
+
+
+
+if(ajax()==true) alert("Uspjesno ste se prijavili");  
+return true;
+
+}
+
+function ajax()
+{ var prolaz = true;
+// Za AJAX
+var opcina = document.getElementById("opcina").value;
+var mjesto=document.getElementById("mjesto").value;
+// mjesto=encodeURIComponent(mjesto);
+  //opcina=encodeURIComponent(opcina);
+// Kraj AJAX-a
+
+  var ajax;
+ 
+if (window.XMLHttpRequest)
+  {
+  ajax = new XMLHttpRequest();
   }
+else
+  {// code for IE6, IE5
+  ajax = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+
+ ajax.onreadystatechange = function() {// Anonimna funkcija
+                                     
+if (ajax.readyState == 4 && ajax.status == 200 )
+  {  
+    var response=JSON.parse(ajax.responseText);
+  
+  if(response.greska=="Nepostojeće mjesto") 
+  {
+  document.getElementById("greskaMjesto").innerHTML="Nepostojeće mjesto";
+  document.getElementById("greskaOpcina").innerHTML="";
+  alert("Nepostojeće mjesto");
+  prolaz=false;
+
+  //return false;
+  }
+  
+ if(response.greska=="Nepostojeća općina") 
+ {
+  document.getElementById("greskaOpcina").innerHTML="Nepostojeća općina";           
+  document.getElementById("greskaMjesto").innerHTML="";
+  alert("Nepostojeća općina");
+ prolaz=false;
+ // return false;
+  //alert(prolaz.value);
+ }
+ if(response.greska=="Mjesto nije iz date općine")
+        {
+            document.getElementById("greskaMjesto").innerHTML="Mjesto nije iz date općine";
+            document.getElementById("greskaOpcina").innerHTML="";
+            alert("Mjesto nije iz date općine");
+  prolaz=false;
+  //         return false;
+        }
+if(response.ok=="Mjesto je iz date općine")
+   {
+ document.getElementById("greskaMjesto").innerHTML="";
+ document.getElementById("greskaOpcina").innerHTML="";
+alert("Tacno");
+  
+  }
+    }
+  
+  }
+  
+
+
+ajax.open("GET","http://zamger.etf.unsa.ba/wt/mjesto_opcina.php?mjesto="+ encodeURIComponent(mjesto) +"&opcina=" +encodeURIComponent(opcina),true);
+ajax.send();
+return prolaz;
+}
