@@ -1,4 +1,4 @@
-function stranicaLOAD(url){
+function stranicaLOAD_PHP(url){
 
 var ajax;
 if (window.XMLHttpRequest)
@@ -35,11 +35,11 @@ ajax.onreadystatechange = function() {
 if (ajax.readyState == 4 && ajax.status == 404)
  document.getElementById("tijelo").innerHTML = "Greska: nepoznat URL";
                                      }
-ajax.open("GET", url, true);
+ajax.open("POST", url, true);
 ajax.send();
                           }
       
-
+stranicaLOAD("vijesti.html");
 
 document.getElementById("pocetna").addEventListener( "click", function(ev){
     stranicaLOAD("vijesti.html");}, false);
@@ -61,41 +61,3 @@ document.getElementById("prijava").addEventListener( "click", function(ev){
              
 
     
-function stranicaLOAD_PHP(url){
-
-stranicaLOAD("vijesti.html");
-var ajax;
-if (window.XMLHttpRequest)
- {
-      try
-      {
-        ajax=new XMLHttpRequest();
-      }
-      catch(err) 
-      {
-      ajax = false;
-      }
-}
-
-else { 
-    try
-    {
-        ajax=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-
- catch(err) 
-      {
-      ajax = false;
-      }
-}
-
-ajax.onreadystatechange = function() {               
- if (ajax.readyState == 4 && ajax.status == 200)
-  document.getElementById("tijelo").innerHTML = ajax.responseText;                               
-                        
-if (ajax.readyState == 4 && ajax.status == 404)
- document.getElementById("tijelo").innerHTML = "Greska: nepoznat URL";
-                                     }
-ajax.open("POST", url, true);
-ajax.send();
-                          }
