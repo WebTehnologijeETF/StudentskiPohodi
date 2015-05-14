@@ -250,7 +250,7 @@ $headers .= "CC: vljubovic@etf.unsa.ba\r\n";
 
    
     $to      = 'agranulo1@etf.unsa.ba';
-    $subject = 'Poruka sa kontakt forme';
+    $subject = 'Poruka sa clan-forme';
    
 $body="Novi zahtjev za članstvo od:\nIme: $name\nPrezime: $prezime\nEmail: $email";
 
