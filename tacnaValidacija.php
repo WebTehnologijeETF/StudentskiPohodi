@@ -158,7 +158,7 @@ $prezime =$_SESSION['prez'];
 
 
 
-<p>Da li ste sigurno da želite poslati ove podatke?</p>
+<p>Da li ste sigurni da želite poslati ove podatke?</p>
 <form action="" method="post">
     <input type="submit" value="Siguran sam" name="button_pressed" />
   
@@ -241,17 +241,18 @@ ini_set('sendmail_from','agranulo1@webmail.etf.unsa.ba');
 
 $from= $email;
 
-
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers = "From:".$from."\r\n";
 $headers .= "Reply-To:".$from."\r\n";
 $headers .= "Return-Path:".$from."\r\n";
-$headers .= "CC: agranulo1@etf.unsa.ba\r\n";
-$headers .= "BCC: sbotulja1@etf.unsa.ba\r\n";
+$headers .= "CC: vljubovic@etf.unsa.ba\r\n";
+
    
     $to      = 'agranulo1@etf.unsa.ba';
-    $subject = 'WT';
+    $subject = 'Poruka sa kontakt forme';
    
-$body="Ime: $name\n Prezime: $prezime\n Email: $email";
+$body="Novi zahtjev za članstvo od:\nIme: $name\nPrezime: $prezime\nEmail: $email";
 
     mail($to, $subject, $body, $headers);
 
