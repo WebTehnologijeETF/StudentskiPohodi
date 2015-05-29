@@ -4,42 +4,44 @@
 <HTML>
 	<BODY>
 
+<p class="Pocetak"> Dobro došli na stranicu Studentskih pohoda Odaberite tab Početna za najnovije vijesti.</p>
 
-<div class="vijesti">
-
-
+<div id="forma1">
+  	
+   <form  action="adminSkripta.php" method="POST">
+  		<p id="prijaviSe">Prijavi se </p>
+     <table id="tabelaPrijaviSe">
+      <tr>
+		   <td><input id="mail" name="username"  type="text" ></td>
+       
+     </tr>
+     
+     <tr>
+      <td><input id="password" name="password" type="password" placeholder="Password"> </td>
+     
+    </tr>
+    <tr>
+      <td> <input id="remember" type="checkbox"> Remember me</td>
+    </tr>
+</table>
+		<button type="submit" >Prijava</button>
+       
 </div>
+</form>
 
+<form  action="skriptaZaMail.php" method="POST">
+      <p id="prijaviSe">Zaboravili ste lozinku? </p>
+     <table id="tabelaZaborava">
+      <tr>
+       <td></td>
+       
+     </tr>
 
-<div class="vijesti">
-
-<p class="Naslov">Pohod u Prag</p>
-<p class ="autor">Author:Aida,29.3.2015.</p>
-<br>
-<p class="opis">U periodu 26.2-2.3.2015.godine organizirali smo pohod u Prag. U ovom pohodu priključilo nam se 1200 pohodaša i doživjelo prelijepe trenutke u Zlatnom gradu. U toku pohoda, obišli smo i Dresden i Budimpeštu. </p>
-<br>
-<p id="det1"> <a href="nesto"> Detaljnije...</a></p>
-
-
-</div>	
-
-<div id="vijesti2">
-<p id="nas1">Pohod u Istanbul</p>
-<p id ="aut1">Author:Aida,29.3.2015.</p>
-<br>
-<p id="vijest1">Istanbul je ponovo osvojen. Vjerni pohodaši uspjeli su zauzeti i ovaj grad. Turci su još jednom pokazali koliko vole naš narod. Hvala svima koji su bili dio nezaboravnog sedmodnevnog provoda. Vidimo se i sljedeće godine. </p>
-<br>
-<p id="det1"> <a href="nesto"> Detaljnije...</a></p>
-</div>	
-
-<div id="vijesti3">
-<p id="nas1">Pohod u Pariz</p>
-<p id ="aut1">Author:Aida,29.3.2015.</p>
-<br>
-<p id="vijest1">U periodu 26.2-2.3.2015.godine organizirali smo pohod u Prag. U ovom pohodu priključilo nam se 1200 pohodaša i doživjelo prelijepe trenutke u Zlatnom gradu. U toku pohoda, obišli smo i Dresden i Budimpeštu. </p>
-<br>
-<p id="det1"> <a href="nesto"> Detaljnije...</a></p>
+     </table>
+    <button type="submit" >Zatraži novu</button>
+       
 </div>
+</form>
 
 <script src="Ajax_Load_Skripta.js"></script>
 <script src="skriptaValidacija.js"></script>

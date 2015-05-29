@@ -63,7 +63,7 @@ document.getElementById("prijava").addEventListener( "click", function(ev){
     
 function stranicaLOAD_PHP(url){
 
-stranicaLOAD("vijesti.html");
+stranicaLOAD("vijesti.php");
 var ajax;
 if (window.XMLHttpRequest)
  {

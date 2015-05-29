@@ -114,7 +114,7 @@ if (empty($_POST["sifra2"])) {
 
 <div id="meni">
   <ul>
-        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.html');">Početna</a></li>
+        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.php');">Početna</a></li>
         <li><a href="#2" id="vodic" onclick="stranicaLOAD_PHP('vodic.html');">Vodič za pohodaše</a></li>
         <li><a href="#3" id="mapa" onclick="stranicaLOAD_PHP('mapa.html');">Mapa</a></li>
         <li><a href="#4" id="galerija" onclick="stranicaLOAD_PHP('galerija.html');">Galerija</a></li>
@@ -246,7 +246,7 @@ $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 $headers = "From:".$from."\r\n";
 $headers .= "Reply-To:".$from."\r\n";
 $headers .= "Return-Path:".$from."\r\n";
-$headers .= "CC: vljubovic@etf.unsa.ba\r\n";
+$headers .= "CC: agranulo1@etf.unsa.ba\r\n";
 
    
     $to      = 'agranulo1@etf.unsa.ba';

@@ -1,65 +1,50 @@
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<body>
-	<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <head>
 
-<?php
-header('Content-Type: text/html; charset=UTF-8');	
-$datoteka = glob("novosti/*.txt");
-	$vijesti=$entry=$date=$autor=$naslov=$opis=$detalji=$slika=$link="";
-	$detaljnijeIspis="Detaljnije";
-	$brojac=0;
-	$det="";
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="stil.css">
 
-	foreach ($datoteka as $txt) 
-	{
-		$entry = file($txt);
-		$date = trim($entry[0]);
-		$autor = trim($entry[1]);
-		$naslov = trim($entry[2]);
-		$naslov= strtolower($naslov);
-		$naslov = ucfirst($naslov);
-		$slika = trim($entry[3]);
-		$brojac = count($entry);
-         $i = 4;
-		
-		while (trim($entry[$i]) != "--" && $brojac-1!= $i) 
-		{
-			$opis = $opis.$entry[$i];
-			$i++;
-			
-		}
-		
-		$det=trim($entry[$i]);
+    <title>Studentski pohodi</title>
+  </head>
+  <body>
+    
+    <?php
+     $veza = new PDO("mysql:dbname=spohodi;host=localhost;charset=utf8", "root", "");
+     $veza->exec("set names utf8");
+     $rezultat = $veza->query("select id, naslov,slika, tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2 from novosti order by vrijeme asc");
+     if (!$rezultat) {
+          $greska = $veza->errorInfo();
+          print "SQL greška: " . $greska[2];
+          exit();
+     }
 
-		if($det== "--")
-		{
-			$i++;
-			while ($i != count($entry)) 
-			{
-				$detalji = $detalji.$entry[$i];
-				$i++;
-			}
-		}
+    
+
+ 
 
 
-		$vijesti ='<div class="vijesti">
-				<h2 class="Naslov">'.$naslov.'</h2>
-				<p class="datum">'.$date.'</p>
-				<p class="autor">'.$autor.'</p> 
-				<img class="Slika" src="'.$slika.'" >
-				<p class="opis">'.$opis.'</p>
-				<p class="detalji">'.$detalji.'</p>';
-				
-				
-		if ($detalji != "")
-		{
-			$link = '<a href="#" class="detalji">'.$detaljnijeIspis.'.</a>';
-		}
-		
-		$vijesti = $vijesti.$link.'</div>';
-	   	echo $vijesti;
-	}
-?>
-</body>
+     foreach ($rezultat as $vijest) {
+    $id=$vijest['id'];
+    $query = $veza->query("SELECT COUNT(*) FROM komentar WHERE novost=".$vijest['id']);
+    $number_Of_Comments = $query->fetchColumn();
+    //print "<p>".$number_Of_Comments."</p>";
+
+
+print "<div class= vijesti>"."<img src=".$vijest['slika'].">".
+"<p class=Naslov>".$vijest['naslov']."</p>"."<br>"."<br>".
+"<p class =autor>".$vijest['autor']." "."<small>".date("d.m.Y. (h:i)", $vijest['vrijeme2'])."</small>"."</p>"."<br>".
+"<p class=opis>". $vijest['tekst']."</p>".
+"<p class=det1>"."<a href=PrikaziKomentar.php?id=".$vijest['id'].">".$number_Of_Comments." komentara"."</a>"."</p>"."<br>"."<br>";
+
+}
+
+ 
+
+
+    ?>
+  </body>
 </html>
+
+	

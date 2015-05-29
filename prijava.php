@@ -42,7 +42,7 @@
 
   <div id="tijelo">
 
-  <div id="forma1">
+  <!--div id="forma1">
    <form class="formaPrijava">
   		<p id="prijaviSe">Prijavi se</p>
      <table id="tabelaPrijaviSe">
@@ -63,7 +63,7 @@
 		<button type="submit" class="signIn">Prijava</button>
        
 </div>
-</form>
+</form-->
 
 
 

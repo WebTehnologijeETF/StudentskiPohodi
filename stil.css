@@ -60,6 +60,7 @@ padding: 0;
      background-color: #F8F8F8;
      height: 20%;
      font-family: 'Hind';
+     margin-top: 100px;
  }
 
  #meni ul 
@@ -107,9 +108,10 @@ clear: both;
 
 .vijesti
 {
-background-image: url("Prag.jpg");
-	background-repeat:no-repeat;
+/*background-image: url("Prag.jpg");*/
+	/*background-repeat:no-repeat;*/
 	 font-family: 'Hind';
+	 margin-top: 50px;
 	
 
 
@@ -120,6 +122,7 @@ background-image: url("Prag.jpg");
 	font-weight: bold;
 	font-size: 30px;
 	margin-left:620px;
+	margin-top: -350px;
 	background-color: orange;
 	width: 25%;
 	 font-family: 'Hind';
@@ -130,6 +133,7 @@ background-image: url("Prag.jpg");
    color: #989898;
    font-size: 15px;
    margin-left:620px;
+margin-top: -80px;
     font-family: 'Hind';
 
  }
@@ -140,14 +144,16 @@ background-image: url("Prag.jpg");
 	text-align: justify;
 	 font-family: 'Hind';
 	margin-left:620px;
+	margin-top: -30px;
+
 }
 
 
-#det1 a
+.det1 a
 { 
 	color: orange;
 	font-weight: bold;
-margin-left: 620px;
+     margin-left: 620px;
  font-family: 'Hind';
 }
 
@@ -466,4 +472,70 @@ text-align: right;
  
 font-family: 'Hind';
 
+}
+
+.Pocetak{
+	font-family: 'Hind';
+	font-weight: bold;
+	 color: #FF3300;
+}
+
+
+
+
+
+.komentari
+{
+	margin-left:0px;
+	border: 2px solid #FF6633;
+	margin-top:80px;
+	height: 150px;
+	margin-left: 200px;
+	width: 900px;
+}
+ a..komAutor:link{
+
+	font-family: 'Hind';
+	color: black;
+	font-weight: bold;
+	font-size: 12pt;
+	color: #FF6600;
+
+}
+
+/* visited link */
+ a.komAutor:visited {
+    color: #888888;
+}
+
+/* selected link */
+a.komAutor:active {
+    color: #888888;
+}
+.datAutor{
+	font-family: 'Hind';
+	color: #989898;
+	font-size: 9pt;
+margin-top: -20px;
+font-weight: bold;
+}
+.mailAutor{
+	font-family: 'Hind';
+	color: black;
+	
+	font-size: 9pt;
+	margin-top: -20px;
+
+}
+.tekstKomentara{
+
+	font-family: 'Hind';
+	color: black;
+font-size: 12pt;
+}
+.det{ 
+	color: orange;
+	font-weight: bold;
+     margin-left: 620px;
+ font-family: 'Hind';
 }
