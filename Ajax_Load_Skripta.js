@@ -41,20 +41,20 @@ ajax.send();
       
 
 
-document.getElementById("pocetna").addEventListener( "click", function(ev){
-    stranicaLOAD("vijesti.html");}, false);
+/*document.getElementById("pocetna").addEventListener( "click", function(ev){
+    stranicaLOAD("vijesti.html");}, false);*/
 
 document.getElementById("vodic").addEventListener( "click", function(ev){
-              stranicaLOAD("Vodic.html");}, false);
+              stranicaLOAD("Vodic.php");}, false);
 
 document.getElementById("mapa").addEventListener( "click", function(ev){
-                stranicaLOAD("mapa.html");}, false);
+                stranicaLOAD("mapa.php");}, false);
 
  document.getElementById("galerija").addEventListener( "click", function(ev){
-               stranicaLOAD("galerija.html");}, false);
+               stranicaLOAD("galerija.php");}, false);
 
 document.getElementById("kontakt").addEventListener( "click", function(ev){
-               stranicaLOAD("kontakt.html"); }, false);
+               stranicaLOAD("kontakt.php"); }, false);
 
 document.getElementById("prijava").addEventListener( "click", function(ev){
                 stranicaLOAD("prijava.html");}, false);

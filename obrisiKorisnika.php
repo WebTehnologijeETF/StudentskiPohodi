@@ -38,10 +38,10 @@
 
 
 <div id="tijelo">
-	<?php
 
+<?php 
 
-  $username="";
+$username="";
 session_start();
 if (isset($_SESSION['username'])) 
 { $username= $_SESSION['username'];
@@ -50,36 +50,56 @@ if (isset($_SESSION['username']))
 }
 
 else print "<p><a id=logprijava href='index.html'>LOGIN</a></p>";
-$id="";
-     $veza = new PDO("mysql:dbname=spohodi;host=localhost;charset=utf8", "root", "");
+
+$veza = new PDO("mysql:dbname=spohodi;host=localhost;charset=utf8", "root", "");
      $veza->exec("set names utf8");
-     $rezultat = $veza->query("select id, naslov,slika, tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2 from novosti order by vrijeme asc");
+   /*  $rezultat = $veza->query("select id, naslov,slika, tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2 from novosti order by vrijeme asc");
      if (!$rezultat) {
           $greska = $veza->errorInfo();
           print "SQL greška: " . $greska[2];
           exit();
-     }
+     }*/
 
 
-/*unos komentara*/
-$nID ="";
+/*unos korisnika*/
+$korisnik = $mejl =$sifra=$vID="";
 
 
-if(isset($_POST["IDKomentara"]))  
-$nID=$_POST['IDKomentara'];
+if(isset($_POST["user"]))  
+$korisnik=$_POST['user'];
+
+
+if(isset($_POST["mejl"]))  
+$mejl=$_POST['mejl'];
+
+if(isset($_POST["sifrica"]))  
+$sifra=$_POST['sifrica'];
+
+/*if(isset($_POST["imence"]))  
+$aut=$_POST['imence'];*/
+/*if (isset($_SESSION['username']))
+       $aut= $_SESSION['username'];
+      else $aut='Anonimac';
+
 if(isset($_POST["ID"]))  
 $vID=$_POST['ID'];
-
+*/
 $message="";
-$valid=true;
-
-if(empty($nID))
+$valid=true; 
+if(empty($korisnik) || empty($mejl))
 {
-  $message = "ID komentara je obavezan!";
+  $message = "Sva polja su obavezna!";
 //echo "<script type='text/javascript'>alert('$message');</script>";
 $valid=false;
 //header('Location:vijesti.php'); exit();
 }
+
+
+if ( (!empty($mejl) &&!filter_var($mejl, FILTER_VALIDATE_EMAIL))) {
+       $message = "Neispravan email format!";
+//echo "<script type='text/javascript'>alert('$message');</script>";
+$valid=false;
+     }
 
 //if(!$valid) { echo "<script type='text/javascript'>alert('$message');</script>";/*header('Location:PrikaziKomentar.php?id='.$vID''); exit();*/}
 
@@ -88,30 +108,27 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
 
 if ($valid){
 
-$sql = "DELETE FROM komentar
-WHERE id = $nID";
+$sql = "DELETE FROM obicnikorisnik WHERE email ='".$mejl."'";
     // use exec() because no results are returned
     $veza->exec($sql);
-print "<p> Komentar je uspješno obrisan. </p>";
+print "<p> Korisnik uspješno obrisan. </p>";
+   print "<p><a href='adminSkripta.php'>Povratak</a></p>";
   
 
     }
 
 else if(!$valid){
-	print "<p class=ispis> Vaš komentar nije obrisan. Ispravite greške i pokušajte ponovo. </p>".
-	"<p class=greska> Greška: ".$message."</p>".
-"<p class=preusmjerenje>"."<a href=PrikaziKomentarAdmin.php?id=".$vID.">"."Vrati se na novost"."</a>";}
+  print "<p class=ispis> Korisnik nije obrisan. Ispravite greške i pokušajte ponovo. </p>".
+  "<p class=greska> Greška: ".$message."</p>".
 
-
+print "<p><a href='adminSkripta.php'>Povratak</a></p>";
 }
-
+}
 
 
  ?>
 
-
-
-
+ 
  </div>
 <script src="Ajax_Load_Skripta.js"></script>
 <script src="skriptaValidacija.js"></script>

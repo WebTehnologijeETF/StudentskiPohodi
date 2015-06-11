@@ -26,10 +26,10 @@
   <div id="meni">
   <ul>
         <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.html');">Početna</a></li>
-        <li><a href="#2" id="vodic" onclick="stranicaLOAD_PHP('vodic.html');">Vodič za pohodaše</a></li>
-        <li><a href="#3" id="mapa" onclick="stranicaLOAD_PHP('mapa.html');">Mapa</a></li>
-        <li><a href="#4" id="galerija" onclick="stranicaLOAD_PHP('galerija.html');">Galerija</a></li>
-        <li><a href="#5" id="kontakt" onclick="stranicaLOAD_PHP('kontakt.html');">Kontakt</a></li>
+        <li><a href="#2" id="vodic" onclick="stranicaLOAD_PHP('vodic.php');">Vodič za pohodaše</a></li>
+        <li><a href="#3" id="mapa" onclick="stranicaLOAD_PHP('mapa.php');">Mapa</a></li>
+        <li><a href="#4" id="galerija" onclick="stranicaLOAD_PHP('galerija.php');">Galerija</a></li>
+        <li><a href="#5" id="kontakt" onclick="stranicaLOAD_PHP('kontakt.php');">Kontakt</a></li>
         <li><a href="#6" id="prijava" onclick="stranicaLOAD_PHP('prijava.html');">Prijava</a></li>
     
     
@@ -118,7 +118,7 @@
         <td id="komentarMjesto"> </td>
     </tr>
   </table>
- <button type="submit" class="submit" name="submit" value="Save Data">Spremi</button>
+ <button type="submit"  name="submit" value="Save Data" id="button">Spremi</button>
 </form>
 </div>
 

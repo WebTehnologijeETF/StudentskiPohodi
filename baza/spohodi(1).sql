@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 29, 2015 at 07:46 AM
+-- Generation Time: Jun 11, 2015 at 10:43 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `komentar` (
   `vrijeme` timestamp NOT NULL,
   PRIMARY KEY (`id`),
   KEY `novost` (`novost`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=44 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=63 ;
 
 --
 -- Dumping data for table `komentar`
@@ -46,7 +46,15 @@ INSERT INTO `komentar` (`id`, `novost`, `tekst`, `autor`, `email`, `vrijeme`) VA
 (2, 2, 'Pohod u Istanbul je bio super. Jedva čekam sljedeći. :) :)', 'Belma', '', '2015-05-28 00:37:07'),
 (3, 3, 'U gradu ljubavi, lako se zavoliii', 'Zaljubljena<3', '', '2015-05-28 00:37:36'),
 (39, 2, 'Istanbul seni kokuyor. :)', 'Aida', 'agranulo1@etf.unsa.ba', '2015-05-28 17:26:13'),
-(42, 2, 'komentarcic', 'Aidica', '', '2015-05-29 05:34:40');
+(42, 2, 'komentarcic', 'Aidica', '', '2015-05-29 05:34:40'),
+(43, 1, 'komennnn', 'ime', '', '2015-06-08 13:20:39'),
+(51, 2, 'aaaaaaa', 'aaaaa', '', '2015-06-08 23:53:52'),
+(54, 1, 'komentar kao anonmius', 'Anonimac', '', '2015-06-09 19:33:10'),
+(55, 1, 'anonmiac fkt', 'Anonimac', '', '2015-06-09 19:35:41'),
+(56, 3, 'kommmm kao Korisnik aBD', 'korisnik', '', '2015-06-09 19:36:29'),
+(57, 3, 'komentar kao Aida', 'Aida', '', '2015-06-09 19:38:03'),
+(58, 2, 'kommmmmmmm', 'Anonimac', '', '2015-06-11 18:47:29'),
+(62, 1, 'bdfjdndjs', 'korisnik', '', '2015-06-11 19:33:02');
 
 -- --------------------------------------------------------
 
@@ -82,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `novosti` (
   `autor` varchar(20) COLLATE utf8_slovenian_ci NOT NULL,
   `vrijeme` timestamp NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `novosti`
@@ -92,6 +100,31 @@ INSERT INTO `novosti` (`id`, `naslov`, `slika`, `tekst`, `autor`, `vrijeme`) VAL
 (1, 'Pohod u Prag', '"Prag.jpg"', 'U periodu 26.2-2.3.2015.godine organizirali smo pohod u Prag. U ovom pohodu priključilo nam se 1200 pohodaša i doživjelo prelijepe trenutke u Zlatnom gradu. U toku pohoda, obišli smo i Dresden i Budimpeštu.\r\n', 'Aida', '2015-05-27 16:53:50'),
 (2, 'Pohod u Istanbul', '"Istanbul.jpg"', 'Istanbul je ponovo osvojen. Vjerni pohodaši uspjeli su zauzeti i ovaj grad. Turci su još jednom pokazali koliko vole naš narod. Hvala svima koji su bili dio nezaboravnog sedmodnevnog provoda. Vidimo se i sljedeće godine.', 'Aida', '2015-05-27 13:13:45'),
 (3, 'Pohod u Pariz', '"Pariz.jpg"', 'Hiljadu pohodaša pohodilo je u Grad ljubavi. Imali su priliku uživati u ljepotama Sene, Aiffelovog tornja,  muzeja Luvr i Versaj te u mnogobrojnim drugim atrakcijama.', 'Aida', '2015-05-27 16:32:35');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `obicnikorisnik`
+--
+
+CREATE TABLE IF NOT EXISTS `obicnikorisnik` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
+  `password` varchar(50) COLLATE utf8_slovenian_ci NOT NULL,
+  `email` text COLLATE utf8_slovenian_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_slovenian_ci AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `obicnikorisnik`
+--
+
+INSERT INTO `obicnikorisnik` (`id`, `username`, `password`, `email`) VALUES
+(1, 'korisnik', 'sifra', 'korisnik@hotmail.com'),
+(2, 'kor2', 'VP@ $lqz%]i+', 'agranulo1@etf.unsa.ba'),
+(4, 'asa', 'asa', 'asa@hotmail.com'),
+(5, 'novi', 'novi', 'novi@hotmail.com'),
+(6, 'user', 'user', 'user@hotmail.com');
 
 --
 -- Constraints for dumped tables

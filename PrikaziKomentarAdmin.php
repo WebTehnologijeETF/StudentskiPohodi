@@ -13,28 +13,7 @@
 </HEAD>
 <BODY>
   
-  <h1>
-     <div id="logo"></div>
-     <div id="tekst">Studentski pohodi</div>
-  </h1>
-
-
-<div id="meni">
-  <ul>
-        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.php');">Početna</a></li>
-        <li><a href="#2" id="vodic" onclick="stranicaLOAD_PHP('vodic.html');">Vodič za pohodaše</a></li>
-        <li><a href="#3" id="mapa" onclick="stranicaLOAD_PHP('mapa.html');">Mapa</a></li>
-        <li><a href="#4" id="galerija" onclick="stranicaLOAD_PHP('galerija.html');">Galerija</a></li>
-        <li><a href="#5" id="kontakt" onclick="stranicaLOAD_PHP('kontakt.html');">Kontakt</a></li>
-        <li><a href="#6" id="prijava" onclick="stranicaLOAD_PHP('prijava.html');">Prijava</a></li>
-    
-    
-
-    </ul></div>
-  <div id ="nebo"></div>
-  <div id="twitter"></div>
-  <div id="dno"></div>
-  <div id="face"></div>
+  
 
 
 <div id="tijelo">
@@ -59,14 +38,14 @@ $query = $veza->query("SELECT COUNT(*) FROM komentar WHERE novost=".$vijest['id'
     $number_Of_Comments = $query->fetchColumn();
 
 if($id==$vijest['id'])
-{
+{/*
   print "<div class= vijesti>"."<img src=".$vijest['slika'].">".
 "<p class=Naslov>".$vijest['naslov']."</p>"."<br>"."<br>".
 "<p class =autor>".$vijest['autor']." "."<small>".date("d.m.Y. (h:i)", $vijest['vrijeme2'])."</small>"."</p>"."<br>".
 "<p class=opis>". $vijest['tekst']."</p>".
 "<p class=det>".$number_Of_Comments." komentara"."</p>"."<br>"."<br>";
     
-     
+     */
 
       $komentar = $veza->query("SELECT id,novost,tekst, autor, email, UNIX_TIMESTAMP(vrijeme) vrijeme2 FROM komentar 
                                  WHERE novost=$id Order by vrijeme asc");
@@ -80,7 +59,8 @@ foreach ($komentar as $komIspis) {
              $komIspis['autor']."</a>"." kaže: "."</p>".
            "<p class=datAutor>".date("d.m.Y. (h:i)".$komIspis['vrijeme2'])."</p>".
            "<p class=mailAutor>".$komIspis['email']."<br>".
-           "<p class=tekstKomentara>".$komIspis['tekst']."</p>"."<br>"."<br>"."</div>";   
+           "<p class=tekstKomentara>".$komIspis['tekst']."</p>"."<br>"."<br>"."</div>";  
+         //  print "<a href=# onclick=deleteKomentar(".$komIspis['id'].")>"."Obrisi"."</a>";  
         }
       else if($EM!="")
          print "<div class= komentari>"." kom broj: ". $komIspis['id']." ".
@@ -89,8 +69,16 @@ foreach ($komentar as $komIspis) {
            "<p class=datAutor>".date("d.m.Y. (h:i)".$komIspis['vrijeme2'])."</p>".
            "<p class=mailAutor>".$komIspis['email']."<br>".
            "<p class=tekstKomentara>".$komIspis['tekst']."</p>"."<br>"."<br>"."</div>";
+       //    print "<a href=# onclick=deleteKomentar(".$komIspis['id'].")>"."Obrisi"."</a>"; 
         $EM=$komIspis['email'];
-       } }     
+       } 
+print "<a id=zatvori href=# onclick=hideKomentar(".$vijest['id'].")>"."Zatvori"."</a>"."<br>";
+
+
+
+print "<p><span id=txtHint></span></p>"."<br>";
+
+     }     
 }
 
 
@@ -157,12 +145,12 @@ if (empty($_POST["komentarcic"])) {
 
 <form action="PosaljiKomentar.php" method="post" id="my_form">
   <table>
-  <tr>
+  <!--tr>
   <td>Ime:</td>
   <td> <input type="text" name="imence"> </td>
   <td id="greskaIme"><span class="error">* <?php echo $nameErr;?> </span> </td>
   <td id="komentarIme"> </td>
-  </tr>
+  </tr-->
 
 <tr>
   <td>E-mail:</td>
@@ -208,5 +196,7 @@ if (empty($_POST["komentarcic"])) {
 <script src="skriptaValidacija.js"></script>
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
+   <script src="skriptaKomentari.js"></script>
+
   </BODY>
 </HTML>

@@ -21,12 +21,12 @@
 
 <div id="meni">
   <ul>
-        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.php');">Početna</a></li>
-        <li><a href="#2" id="vodic" onclick="stranicaLOAD_PHP('vodic.html');">Vodič za pohodaše</a></li>
-        <li><a href="#3" id="mapa" onclick="stranicaLOAD_PHP('mapa.html');">Mapa</a></li>
-        <li><a href="#4" id="galerija" onclick="stranicaLOAD_PHP('galerija.html');">Galerija</a></li>
-        <li><a href="#5" id="kontakt" onclick="stranicaLOAD_PHP('kontakt.html');">Kontakt</a></li>
-        <li><a href="#6" id="prijava" onclick="stranicaLOAD_PHP('prijava.html');">Prijava</a></li>
+        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijestiAdmin.php');">Početna</a></li>
+        <li><a href="#2" id="vodic" onclick="stranicaLOAD('vodic.php');">Vodič za pohodaše</a></li>
+        <li><a href="#3" id="mapa" onclick="stranicaLOAD('mapa.php');">Mapa</a></li>
+        <li><a href="#4" id="galerija" onclick="stranicaLOAD('galerija.php');">Galerija</a></li>
+        <li><a href="#5" id="kontakt" onclick="stranicaLOAD('kontakt.php');">Kontakt</a></li>
+        <li><a href="#6" id="prijava" onclick="stranicaLOAD('prijava.html');">Prijava</a></li>
     
     
 
@@ -39,6 +39,20 @@
 
 <div id="tijelo">
 	<?php
+
+
+
+$username="";
+session_start();
+if (isset($_SESSION['username'])) 
+{ $username= $_SESSION['username'];
+  print "<p> Prijavljeni ste pod korisničkim imenom:  ".$username."</p>";
+  print "<p><a href='logout.php'>Odjava</a></p>";
+}
+
+else print "<p><a id=logprijava href='index.html'>LOGIN</a></p>";
+
+
 $id="";
      $veza = new PDO("mysql:dbname=spohodi;host=localhost;charset=utf8", "root", "");
      $veza->exec("set names utf8");
@@ -106,5 +120,6 @@ else if(!$valid){
 <script src="skriptaValidacija.js"></script>
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
+   <script src="skriptaKomentari.js"></script>
   </BODY>
 </HTML>

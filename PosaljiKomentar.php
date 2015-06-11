@@ -22,11 +22,11 @@
 <div id="meni">
   <ul>
         <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.php');">Početna</a></li>
-        <li><a href="#2" id="vodic" onclick="stranicaLOAD_PHP('vodic.html');">Vodič za pohodaše</a></li>
-        <li><a href="#3" id="mapa" onclick="stranicaLOAD_PHP('mapa.html');">Mapa</a></li>
-        <li><a href="#4" id="galerija" onclick="stranicaLOAD_PHP('galerija.html');">Galerija</a></li>
-        <li><a href="#5" id="kontakt" onclick="stranicaLOAD_PHP('kontakt.html');">Kontakt</a></li>
-        <li><a href="#6" id="prijava" onclick="stranicaLOAD_PHP('prijava.html');">Prijava</a></li>
+        <li><a href="#2" id="vodic" onclick="stranicaLOAD('vodic.php');">Vodič za pohodaše</a></li>
+        <li><a href="#3" id="mapa" onclick="stranicaLOAD('mapa.php');">Mapa</a></li>
+        <li><a href="#4" id="galerija" onclick="stranicaLOAD('galerija.php');">Galerija</a></li>
+        <li><a href="#5" id="kontakt" onclick="stranicaLOAD('kontakt.php');">Kontakt</a></li>
+        <li><a href="#6" id="prijava" onclick="stranicaLOAD('prijava.html');">Prijava</a></li>
     
     
 
@@ -39,6 +39,20 @@
 
 <div id="tijelo">
 	<?php
+
+
+$username="";
+session_start();
+if (isset($_SESSION['username'])) 
+{ $username= $_SESSION['username'];
+  print "<p> Prijavljeni ste pod korisničkim imenom:  ".$username."</p>";
+  print "<p><a href='logout.php'>Odjava</a></p>";
+}
+
+else print "<p><a id=logprijava href='index.html'>LOGIN</a></p>";
+
+
+  
 $id="";
      $veza = new PDO("mysql:dbname=spohodi;host=localhost;charset=utf8", "root", "");
      $veza->exec("set names utf8");
@@ -61,17 +75,20 @@ $EM=$_POST['emailcic'];
 if(isset($_POST["komentarcic"]))  
 $kom=$_POST['komentarcic'];
 
-if(isset($_POST["imence"]))  
-$aut=$_POST['imence'];
+/*if(isset($_POST["imence"]))  
+$aut=$_POST['imence'];*/
+if (isset($_SESSION['username']))
+       $aut= $_SESSION['username'];
+      else $aut='Anonimac';
 
 if(isset($_POST["ID"]))  
 $vID=$_POST['ID'];
 
 $message="";
 $valid=true; 
-if(empty($kom) || empty($aut))
+if(empty($kom) )
 {
-	$message = "Ime i komentar su obavezni!";
+	$message = "Komentar su obavezni!";
 //echo "<script type='text/javascript'>alert('$message');</script>";
 $valid=false;
 //header('Location:vijesti.php'); exit();
@@ -103,7 +120,7 @@ print "<p> Vaš komentar je usješno spremljen. Hvala na učešću. </p>";
 else if(!$valid){
 	print "<p class=ispis> Vaš komentar nije spremljen. Ispravite greške i pokušajte ponovo. </p>".
 	"<p class=greska> Greška: ".$message."</p>".
-"<p class=preusmjerenje>"."<a href=PrikaziKomentarAdmin.php?id=".$vID.">"."Vrati se na novost"."</a>";}
+"<p class=preusmjerenje>"."<a href=PrikaziKomentar.php?id=".$vID.">"."Vrati se na komentare"."</a>";}
 
 
 }
@@ -120,5 +137,6 @@ else if(!$valid){
 <script src="skriptaValidacija.js"></script>
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
+   <script src="skriptaKomentari.js"></script>
   </BODY>
 </HTML>

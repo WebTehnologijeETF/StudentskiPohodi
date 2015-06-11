@@ -11,6 +11,17 @@
   <body>
     
     <?php
+
+
+    $username="";
+session_start();
+if (isset($_SESSION['username'])) 
+{ $username= $_SESSION['username'];
+  print "<p> Prijavljeni ste pod korisničkim imenom:  ".$username."</p>";
+  print "<p><a href='logout.php'>Odjava</a></p>";
+}
+
+else print "<p><a id=logprijava href='index.html'>LOGIN</a></p>";
      $veza = new PDO("mysql:dbname=spohodi;host=localhost;charset=utf8", "root", "");
      $veza->exec("set names utf8");
      $rezultat = $veza->query("select id, naslov,slika, tekst, autor, UNIX_TIMESTAMP(vrijeme) vrijeme2 from novosti order by vrijeme asc");
@@ -36,14 +47,19 @@ print "<div class= vijesti>"."<img src=".$vijest['slika'].">".
 "<p class=Naslov>".$vijest['naslov']."</p>"."<br>"."<br>".
 "<p class =autor>".$vijest['autor']." "."<small>".date("d.m.Y. (h:i)", $vijest['vrijeme2'])."</small>"."</p>"."<br>".
 "<p class=opis>". $vijest['tekst']."</p>".
-"<p class=det1>"."<a href=PrikaziKomentar.php?id=".$vijest['id'].">".$number_Of_Comments." komentara"."</a>"."</p>"."<br>"."<br>";
+"<p class=det1>"."<a href=# onclick=showKomentar(".$vijest['id'].")>".$number_Of_Comments." komentara"."</a>"."</p>".
+ "<br>";
+
+
 
 }
 
- 
+print "<p><span id=txtHint></span></p>"; 
 
 
     ?>
+
+    <script src="skriptaKomentari.js"></script>
   </body>
 </html>
 

@@ -20,7 +20,7 @@
 
 <div id="meni">
   <ul>
-        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijestiAdmin.php');">Početna</a></li>
+        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.php');">Početna</a></li>
         <li><a href="#2" id="vodic" onclick="stranicaLOAD('vodic.php');">Vodič za pohodaše</a></li>
         <li><a href="#3" id="mapa" onclick="stranicaLOAD('mapa.php');">Mapa</a></li>
         <li><a href="#4" id="galerija" onclick="stranicaLOAD('galerija.php');">Galerija</a></li>
@@ -41,7 +41,6 @@
 <?php
 $ime=$sifra=$message="";
 $valid=true;
-
 session_start();
  $veza = new PDO("mysql:dbname=spohodi;host=localhost;charset=utf8", "root", "");
 $veza->exec("set names utf8");
@@ -55,7 +54,7 @@ $veza->exec("set names utf8");
     if (isset($_SESSION['username'])){
     $username = $_SESSION['username'];
         print "<p> Već ste prijavljeni pod korisničkim imenom:  ".$username."</p>";
-        print "<p><a href='logout.php'>Odjava</a></p>";
+         print "<p><a href='logout.php'>Odjava</a></p>";
         
         }
     else if (isset($_REQUEST['username'])) {
@@ -63,7 +62,7 @@ $veza->exec("set names utf8");
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];
 
-    $query = $veza->prepare("SELECT username, password FROM korisnik WHERE username=? and password=?");
+    $query = $veza->prepare("SELECT username, password FROM obicnikorisnik WHERE username=? and password=?");
     $query->execute(array($username,$password));
  
 $postojiLI=$query->rowCount();
@@ -106,71 +105,19 @@ print "<p>".$message."</p>";
         }
 
 //session_destroy();
-         ?>   
+         ?>    
 
 
-<p> Dodaj korisnika </p>
+
+  </body>
+</html>
 
 
-<form action="dodajKorisnika.php" method="post" id="dodajKorisnikaForma">
-  <table>
-  <tr>
-  <td>Username:</td>
-  <td> <input type="text" name="user"> </td>
-  <!--td id="greskaIme"><span class="error">* <?php echo $nameErr;?> </span> </td-->
-  <td id="komentarIme"> </td>
-  </tr>
-
-<tr>
-  <td>E-mail:</td>
-  <td> <input type="text" name="mejl"></td>
- <!--td id="greskaMail"><span class="error"> <?php echo $emailErr;?> </span> </td-->
-  <td id="komentarMail"> </td>
-  </tr>
-
-<tr>
-  <td>Sifra:</td> 
-  <td><textarea name="sifrica" ?></textarea> </td>
-  <!--td id="greskaKom"><span class="error">* <?php echo $komErr;?> </span> </td-->
-  <td id="komentarSifra"> </td>
-  </tr>
 
 
-</table>
- <button type="submit" name="submit">Spremi</button>
-
-</form>
-<p> Obrisi korisnika </p>
 
 
-<form action="obrisiKorisnika.php" method="post" id="obrisiKorisnikaForma">
-  <table>
-  <tr>
-  <td>Username:</td>
-  <td> <input type="text" name="user"> </td>
-  <!--td id="greskaIme"><span class="error">* <?php echo $nameErr;?> </span> </td-->
-  <td id="komentarIme"> </td>
-  </tr>
 
-<tr>
-  <td>E-mail:</td>
-  <td> <input type="text" name="mejl"></td>
- <!--td id="greskaMail"><span class="error"> <?php echo $emailErr;?> </span> </td-->
-  <td id="komentarMail"> </td>
-  </tr>
-
-
-  <td id="komentarSifra"> </td>
-  </tr>
-
-
-<!--input type="hidden" name="user" value="<?php echo $korisnik ?>">
-<input type="hidden" name="sifrica" value="<?php echo $sifra ?>">
-<input type="hidden" name="mejl" value="<?php echo $mejl ?>"-->
-</table>
- <button type="submit" name="submit">Spremi</button>
-
-</form>
 </div>
 <script src="Ajax_Load_Skripta.js"></script>
 <script src="skriptaValidacija.js"></script>

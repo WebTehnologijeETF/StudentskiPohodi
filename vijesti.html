@@ -9,7 +9,7 @@
 <div id="forma1">
   	
    <form  action="adminSkripta.php" method="POST">
-  		<p id="prijaviSe">Prijavi se </p>
+  		<p id="prijaviSe">Admin si? Prijavi se! </p>
      <table id="tabelaPrijaviSe">
       <tr>
 		   <td><input id="mail" name="username"  type="text" ></td>
@@ -19,16 +19,32 @@
      <tr>
       <td><input id="password" name="password" type="password" placeholder="Password"> </td>
      
-    </tr>
-    <tr>
-      <td> <input id="remember" type="checkbox"> Remember me</td>
-    </tr>
+    
 </table>
 		<button type="submit" >Prijava</button>
        
 </div>
 </form>
 
+<div id="formaObicniKorisnik">
+    
+   <form  action="obicniKorisnikSkirpta.php" method="POST">
+      <p id="prijaviSe">Korisnik si? Prijavi se! </p>
+     <table id="tabelaPrijaviSe">
+      <tr>
+       <td><input id="mail" name="username"  type="text" ></td>
+       
+     </tr>
+     
+     <tr>
+      <td><input id="password" name="password" type="password" placeholder="Password"> </td>
+     
+    
+</table>
+    <button type="submit" >Prijava</button>
+       
+</div>
+</form>
 <form  action="skriptaZaMail.php" method="POST">
       <p id="prijaviSe">Zaboravili ste lozinku? </p>
      <table id="tabelaZaborava">

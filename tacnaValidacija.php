@@ -115,11 +115,11 @@ if (empty($_POST["sifra2"])) {
 <div id="meni">
   <ul>
         <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijesti.php');">Početna</a></li>
-        <li><a href="#2" id="vodic" onclick="stranicaLOAD_PHP('vodic.html');">Vodič za pohodaše</a></li>
-        <li><a href="#3" id="mapa" onclick="stranicaLOAD_PHP('mapa.html');">Mapa</a></li>
-        <li><a href="#4" id="galerija" onclick="stranicaLOAD_PHP('galerija.html');">Galerija</a></li>
-        <li><a href="#5" id="kontakt" onclick="stranicaLOAD_PHP('kontakt.html');">Kontakt</a></li>
-        <li><a href="#6" id="prijava" onclick="stranicaLOAD_PHP('prijava.html');">Prijava</a></li>
+        <li><a href="#2" id="vodic" onclick="stranicaLOAD('vodic.php');">Vodič za pohodaše</a></li>
+        <li><a href="#3" id="mapa" onclick="stranicaLOAD('mapa.php');">Mapa</a></li>
+        <li><a href="#4" id="galerija" onclick="stranicaLOAD('galerija.php');">Galerija</a></li>
+        <li><a href="#5" id="kontakt" onclick="stranicaLOAD('kontakt.php');">Kontakt</a></li>
+        <li><a href="#6" id="prijava" onclick="stranicaLOAD('prijava.html');">Prijava</a></li>
     
     
 
@@ -252,7 +252,7 @@ $headers .= "CC: agranulo1@etf.unsa.ba\r\n";
     $to      = 'agranulo1@etf.unsa.ba';
     $subject = 'Poruka sa clan-forme';
    
-$body="Novi zahtjev za članstvo od:\nIme: $name\nPrezime: $prezime\nEmail: $email";
+$body="Novi zahtjev za članstvo od:\nIme: $name\nPrezime: $prezime\nEmail: $email\nsifra: $sifra";
 
     mail($to, $subject, $body, $headers);
 
@@ -266,5 +266,6 @@ $body="Novi zahtjev za članstvo od:\nIme: $name\nPrezime: $prezime\nEmail: $ema
 <script src="skriptaValidacija.js"></script>
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
+   <script src="skriptaKomentari.js"></script>
   </BODY>
 </HTML>
