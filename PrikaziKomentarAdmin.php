@@ -14,7 +14,7 @@
 
 <div id="meni">
   <ul>
-        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijestiAdmin.php');">Početna</a></li>
+        <li><a href="#1" id="pocetna" onclick="stranicaLOAD('vijestiAdmin.php');">Početna</a></li>
         <li><a href="#2" id="vodic" onclick="stranicaLOAD('vodic.php');">Vodič za pohodaše</a></li>
         <li><a href="#3" id="mapa" onclick="stranicaLOAD('mapa.php');">Mapa</a></li>
         <li><a href="#4" id="galerija" onclick="stranicaLOAD('galerija.php');">Galerija</a></li>
