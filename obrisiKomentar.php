@@ -92,15 +92,15 @@ $sql = "DELETE FROM komentar
 WHERE id = $nID";
     // use exec() because no results are returned
     $veza->exec($sql);
-print "<p> Komentar je uspješno obrisan. </p>";
+print "<p class=ispis> Komentar je uspješno obrisan. </p>";
   
 
     }
 
 else if(!$valid){
 	print "<p class=ispis> Vaš komentar nije obrisan. Ispravite greške i pokušajte ponovo. </p>".
-	"<p class=greska> Greška: ".$message."</p>".
-"<p class=preusmjerenje>"."<a href=PrikaziKomentarAdmin.php?id=".$vID.">"."Vrati se na novost"."</a>";}
+	"<p class=ispis> Greška: ".$message."</p>".
+"<p class=ispis>"."<a href=PrikaziKomentarAdmin.php?id=".$vID.">"."Vrati se na novost"."</a>";}
 
 
 }
@@ -118,5 +118,10 @@ else if(!$valid){
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
    <script src="skriptaKomentari.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="mapaSkripta.js"></script>
+<script src="skriptaMeni.js"></script>
+
   </BODY>
 </HTML>

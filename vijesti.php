@@ -47,8 +47,8 @@ print "<div class= vijesti>"."<img src=".$vijest['slika'].">".
 "<p class=Naslov>".$vijest['naslov']."</p>"."<br>"."<br>".
 "<p class =autor>".$vijest['autor']." "."<small>".date("d.m.Y. (h:i)", $vijest['vrijeme2'])."</small>"."</p>"."<br>".
 "<p class=opis>". $vijest['tekst']."</p>".
-"<p class=det1>"."<a href=# onclick=showKomentar(".$vijest['id'].")>".$number_Of_Comments." komentara"."</a>"."</p>".
- "<br>";
+"<p class=det1>"."<a href=PrikaziKomentar.php?id=".$vijest['id'].">".$number_Of_Comments." komentara"."</a>"."</p>"."<br>"."<br>";
+ 
 
 
 
@@ -60,6 +60,10 @@ print "<p><span id=txtHint></span></p>";
     ?>
 
     <script src="skriptaKomentari.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="mapaSkripta.js"></script>
+<script src="skriptaMeni.js"></script>
   </body>
 </html>
 

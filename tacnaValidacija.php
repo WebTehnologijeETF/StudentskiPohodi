@@ -142,7 +142,7 @@ $prezime =$_SESSION['prez'];
  $mjesto = $_SESSION['mjes'];
     
     ?>
-  <p>Provjerite da li ste ispravno popunili kontakt formu</p>
+  <p class="ispis">Provjerite da li ste ispravno popunili kontakt formu</p>
 
   
 <div id ="tabelaPrikaz">
@@ -158,7 +158,7 @@ $prezime =$_SESSION['prez'];
 
 
 
-<p>Da li ste sigurni da želite poslati ove podatke?</p>
+<p class="ispis">Da li ste sigurni da želite poslati ove podatke?</p>
 <form action="" method="post">
     <input type="submit" value="Siguran sam" name="button_pressed" />
   
@@ -167,7 +167,7 @@ $prezime =$_SESSION['prez'];
 
 
 <br> <br><br>
-<p>Ukoliko želite napraviti promjene, uradite to u formi ispod:</p>
+<p class="ispis">Ukoliko želite napraviti promjene, uradite to u formi ispod:</p>
  <p><span class="error">* obavezno polje </span></p>
   <form class="forma_novi_clan" method="post" action="validacija.php" >
    <table id="tabelaNoviClan">
@@ -256,7 +256,7 @@ $body="Novi zahtjev za članstvo od:\nIme: $name\nPrezime: $prezime\nEmail: $ema
 
     mail($to, $subject, $body, $headers);
 
-    echo"<p>'Zahvaljujemo se što ste nas kontaktirali'</p>";
+    echo"<p class=ispis>'Zahvaljujemo se što ste nas kontaktirali'</p>";
 }
 
 ?>
@@ -267,5 +267,9 @@ $body="Novi zahtjev za članstvo od:\nIme: $name\nPrezime: $prezime\nEmail: $ema
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
    <script src="skriptaKomentari.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="mapaSkripta.js"></script>
+<script src="skriptaMeni.js"></script>
   </BODY>
 </HTML>

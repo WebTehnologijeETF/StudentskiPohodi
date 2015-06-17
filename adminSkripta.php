@@ -20,7 +20,7 @@
 
 <div id="meni">
   <ul>
-        <li><a href="#1" id="pocetna" onclick="stranicaLOAD_PHP('vijestiAdmin.php');">Početna</a></li>
+        <li><a href="#1" id="pocetna" onclick="stranicaLOAD('vijestiAdmin.php');">Početna</a></li>
         <li><a href="#2" id="vodic" onclick="stranicaLOAD('vodic.php');">Vodič za pohodaše</a></li>
         <li><a href="#3" id="mapa" onclick="stranicaLOAD('mapa.php');">Mapa</a></li>
         <li><a href="#4" id="galerija" onclick="stranicaLOAD('galerija.php');">Galerija</a></li>
@@ -93,7 +93,7 @@ if(empty($postojiLI)){
          
    }
 
-print "<p>".$message."</p>";
+print "<p class=ispis> ".$message."</p>";
 
  
 
@@ -101,76 +101,16 @@ print "<p>".$message."</p>";
   if(!$valid) {
           $poruke="Neuspješna prijava. Pokušajte ponovo.";
            echo "<script type='text/javascript'>alert('$poruke');</script>";
-           print"<p><a href='index.html'>Povratak</a></p>";
+           print"<p class=ispis><a href='index.html'>Povratak</a></p>";
        //   header('Location:index.html'); exit();
         }
 
 //session_destroy();
          ?>   
 
+<br>
+<br>
 
-<p> Dodaj korisnika </p>
-
-
-<form action="dodajKorisnika.php" method="post" id="dodajKorisnikaForma">
-  <table>
-  <tr>
-  <td>Username:</td>
-  <td> <input type="text" name="user"> </td>
-  <!--td id="greskaIme"><span class="error">* <?php echo $nameErr;?> </span> </td-->
-  <td id="komentarIme"> </td>
-  </tr>
-
-<tr>
-  <td>E-mail:</td>
-  <td> <input type="text" name="mejl"></td>
- <!--td id="greskaMail"><span class="error"> <?php echo $emailErr;?> </span> </td-->
-  <td id="komentarMail"> </td>
-  </tr>
-
-<tr>
-  <td>Sifra:</td> 
-  <td><textarea name="sifrica" ?></textarea> </td>
-  <!--td id="greskaKom"><span class="error">* <?php echo $komErr;?> </span> </td-->
-  <td id="komentarSifra"> </td>
-  </tr>
-
-
-</table>
- <button type="submit" name="submit">Spremi</button>
-
-</form>
-<p> Obrisi korisnika </p>
-
-
-<form action="obrisiKorisnika.php" method="post" id="obrisiKorisnikaForma">
-  <table>
-  <tr>
-  <td>Username:</td>
-  <td> <input type="text" name="user"> </td>
-  <!--td id="greskaIme"><span class="error">* <?php echo $nameErr;?> </span> </td-->
-  <td id="komentarIme"> </td>
-  </tr>
-
-<tr>
-  <td>E-mail:</td>
-  <td> <input type="text" name="mejl"></td>
- <!--td id="greskaMail"><span class="error"> <?php echo $emailErr;?> </span> </td-->
-  <td id="komentarMail"> </td>
-  </tr>
-
-
-  <td id="komentarSifra"> </td>
-  </tr>
-
-
-<!--input type="hidden" name="user" value="<?php echo $korisnik ?>">
-<input type="hidden" name="sifrica" value="<?php echo $sifra ?>">
-<input type="hidden" name="mejl" value="<?php echo $mejl ?>"-->
-</table>
- <button type="submit" name="submit">Spremi</button>
-
-</form>
 </div>
 <script src="Ajax_Load_Skripta.js"></script>
 <script src="skriptaValidacija.js"></script>
@@ -178,5 +118,9 @@ print "<p>".$message."</p>";
    <script src="tabela_Ajax.js"></script>
 
    <script src="skriptaKomentari.js"></script>
+   <script src="skriptaMeni.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="mapaSkripta.js"></script>
   </BODY>
 </HTML>

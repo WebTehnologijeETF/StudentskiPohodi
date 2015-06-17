@@ -100,7 +100,7 @@ print "<p>".$message."</p>";
   if(!$valid) {
           $poruke="Neuspješna prijava. Pokušajte ponovo.";
            echo "<script type='text/javascript'>alert('$poruke');</script>";
-           print"<p><a href='index.html'>Povratak</a></p>";
+           print"<p class=ispis><a href='index.html'>Povratak</a></p>";
        //   header('Location:index.html'); exit();
         }
 
@@ -125,5 +125,10 @@ print "<p>".$message."</p>";
    <script src="tabela_Ajax.js"></script>
 
    <script src="skriptaKomentari.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="mapaSkripta.js"></script>
+<script src="skriptaMeni.js"></script>
+
   </BODY>
 </HTML>

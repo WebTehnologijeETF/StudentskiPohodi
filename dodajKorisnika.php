@@ -112,7 +112,7 @@ print "<p> Korisnik uspješno spremljen. </p>";
 
 else if(!$valid){
   print "<p class=ispis> Korisnik nije spremljen. Ispravite greške i pokušajte ponovo. </p>".
-  "<p class=greska> Greška: ".$message."</p>".
+  "<p class=ispis> Greška: ".$message."</p>".
 
 print "<p><a href='adminSkripta.php'>Povratak</a></p>";
 }
@@ -128,5 +128,6 @@ print "<p><a href='adminSkripta.php'>Povratak</a></p>";
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
    <script src="skriptaKomentari.js"></script>
+   <script src="skriptaMeni.js"></script>
   </BODY>
 </HTML>

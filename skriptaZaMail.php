@@ -42,12 +42,12 @@
 <form id="zaboravljenpassforma" onclick="forgotpass();" method="post">
   <table>
   <tr>
-    <td>Unesite e-mail:</td>
+    <td> <p class="mailPitanje">Unesite e-mail:</p></td>
   <td><input id="eposta" name="eposta"  type="email" placeholder="email@example.com" ></td>
 </tr>
 
 </table>
-<p>Da li ste sigurni da želite poslati ove podatke? <br> </p>
+<p class="mailPitanje">Da li ste sigurni da želite poslati ove podatke? <br> </p>
 <form action="" method="post">
     <input type="submit" value="Posalji" onclick="zaboravljenpass();" name="button_pressed" />
     <p id ="status"></p>
@@ -198,5 +198,9 @@ print
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
    <script src="skriptaKomentari.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="mapaSkripta.js"></script>
+<script src="skriptaMeni.js"></script>
   </BODY>
 </HTML>

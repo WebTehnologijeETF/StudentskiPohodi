@@ -63,7 +63,7 @@ $body="Vaša nova sifra je:.$nova";
 
     mail($to, $subject, $body, $headers);
 
-    echo"<p>'Vaša nova šifra je spremljena. Provjerite mail da istu očitate, ukoliko mail ne stigne u inbox molimo provjerite i JUNK folder.'</p>";
+    echo"<p class=ispis>'Vaša nova šifra je spremljena. Provjerite mail da istu očitate, ukoliko mail ne stigne u inbox molimo provjerite i JUNK folder.'</p>";
   
 
 

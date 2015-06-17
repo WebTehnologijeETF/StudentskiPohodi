@@ -112,14 +112,14 @@ $sql = "INSERT INTO komentar (id,novost,tekst,autor,email,vrijeme)
     VALUES ( '','$vID','$kom','$aut','$EM',NOW())";
     // use exec() because no results are returned
     $veza->exec($sql);
-print "<p> Vaš komentar je usješno spremljen. Hvala na učešću. </p>";
+print "<p class = ispis> Vaš komentar je usješno spremljen. Hvala na učešću. </p>";
   
 
     }
 
 else if(!$valid){
 	print "<p class=ispis> Vaš komentar nije spremljen. Ispravite greške i pokušajte ponovo. </p>".
-	"<p class=greska> Greška: ".$message."</p>".
+	"<p class=ispis> Greška: ".$message."</p>".
 "<p class=preusmjerenje>"."<a href=PrikaziKomentar.php?id=".$vID.">"."Vrati se na komentare"."</a>";}
 
 
@@ -138,5 +138,9 @@ else if(!$valid){
   <!--script src="skriptaValidacijaa.js"></script-->
    <script src="tabela_Ajax.js"></script>
    <script src="skriptaKomentari.js"></script>
+   <script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script src="mapaSkripta.js"></script>
+<script src="skriptaMeni.js"></script>
   </BODY>
 </HTML>

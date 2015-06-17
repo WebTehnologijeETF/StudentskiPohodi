@@ -1,10 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <HTML>
+  <HEAD>
 <link rel="stylesheet" type="text/css" href="stil.css">
-<BODY>
+
+
+
+</HEAD>
+
+<BODY onload="initialize();">
   <?php
-
-
     $username="";
 session_start();
 if (isset($_SESSION['username'])) 
@@ -16,37 +20,28 @@ if (isset($_SESSION['username']))
 else print "<p><a id=logprijava href='index.html'>LOGIN</a></p>";
 ?>	
 
-  <div id="formaMapa">
-    <p id="prijaviPohod">Prijavi Pohod</p>
-   <form id="formaPohodi" method="POST"  onsubmit="return dodajProizvod(this)">
-     <table id="tabelaPohod">
-      <tr>
-      <td> <label id="nazivLabel">Naziv-Mjesto</label></td>
-       <td><input id="naziv" type="textbox" ></td>
-       <td id ="greskaNaziv"></td>
-       <td id="komentarNaziv"> </td>
-     </tr>
-     <tr>
-      <td> <label id="opisLabel">Opis</label></td>
-      <td><input id="opis" type="textarea" > </td>
-      <td id ="greskaOpis"></td>
-      <td id="komentarOpis"></td>
-    </tr>
+  <div id="formaPrijaviPohod">
+    <p id="predloziPohod">Predloži Pohod <br>
+    <a href="http://goo.gl/forms/Mzk6fpwnPE" target="_blank">Otvori link</a>
+    </p>
+</div>
 
-<tr>
-      <td> <label id="cijenaLabel">Cijena</label></td>
-      <td><input id="cijena" type="textbox" > </td>
-      <td id ="greskaCijena"></td>
-      <td id="komentarCijena"></td>
-    </tr>    
-    <tr></tr>
-</table>
-    
-<button type="submit" class="MapaPrijava">Prijavi</button>
+<!--div id="googleMap2">
+<p>Zanima te 
+<a href="https://www.google.ba/maps/@43.8937233,18.3829915,12z?hl=en">Otvori mapu</a>
+</div-->
+<p id="prijaviPohod">Zanima te mapa putovanja?  </p>
+<button onclick="initialize();">Klikni Ovdje</button> 
+
+<br>
+<br>
+<div id="googleMap" style="width:1200px;height:580px;" >
+</div>
+  
 
 
-    
-       
+
+  
 	
    <!--div id="mapaSlika"> 
 
@@ -124,7 +119,9 @@ else print "<p><a id=logprijava href='index.html'>LOGIN</a></p>";
  </div>
 </div-->
 
+<script src="http://maps.googleapis.com/maps/api/js"></script>
 
+<script src="mapaSkripta.js"></script>
 
 
 	</BODY>

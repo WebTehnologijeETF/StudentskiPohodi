@@ -33,40 +33,25 @@ Bosna i Hercegovina<br>
 
      <UL id="lista1" style.display="none" >
 <LI  onclick="prikazi(this)">[+]Vodiči
-<ul>
+<ul id="listaVodica">
 <LI>Ammar Nurkovic 061/860-232</LI>
 <LI>Ibrahim Halilović 061/513-609</LI>
 <LI>Emir Ašćerić 062/455-488</LI>
 <LI>Adnan Uzunović 061/530-620</LI>
 <LI>Mirza Kupusović 061/819-680</LI>
-
-</ul>
-</LI>
-  <ul id="lista2" style.display="none">
-  <LI onclick="prikazi(this)">[+]Članovi 2014
-<ul>
 <LI>Zikret Smajlović 061/963-154</LI>
 <LI>Igor Porobija 061/064-817</LI>
 <LI>Adnan Hasanefendić 061/311-087</LI>
 <LI>Alem Hasanović 061/413-414</LI>
 <LI>Bakir Kalajdžić 061/968-835</LI>
-
-</ul>
-</li>
-   <ul id="lista3" style.display="none">
-  <LI onclick="prikazi(this)">[+]Članovi 2013
-    <ul>
-  <LI>Alija Nurković 062/878-667</LI>
+<LI>Alija Nurković 062/878-667</LI>
 <LI>Ahmed Nurković 061/794-537</LI>
 <LI>Bekir Rovčanin 061/935-155</LI>
 <LI>Mirza Mušanović 061/532-256</LI>
 </ul>
-</li>
-</ul>
-</li>
-</UL>
+
 </LI>
-<UL>
+</UL>
   
 </div>
 <p id="partneri">Naši partneri:</p>
